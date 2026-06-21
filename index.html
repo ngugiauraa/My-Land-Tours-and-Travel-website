@@ -1,0 +1,3836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Land Tours & Travel | Home Page | Premium Safaris & Adventures</title>
+    <meta name="description" content="My Land Tours & Travel offers premium safari experiences in Kenya and East Africa. Book Maasai Mara, Amboseli, Diani Beach, Samburu, Tsavo & more. Since 2009.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mylandtoursandtravel.co.ke/">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <meta property="og:title" content="My Land Tours & Travel | Premium Safaris in Kenya">
+    <meta property="og:description" content="Book unforgettable safari experiences in Kenya. Maasai Mara, Amboseli, Diani Beach & more.">
+    <meta property="og:image" content="https://mylandtoursandtravel.co.ke/og-image.jpg">
+    <meta property="og:url" content="https://mylandtoursandtravel.co.ke">
+    <meta property="og:type" content="website">
+ 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Land Tours & Travel | Premium Safaris in Kenya">
+    <meta name="twitter:description" content="Book unforgettable safari experiences in Kenya. Maasai Mara, Amboseli, Diani Beach & more.">
+    <meta name="twitter:image" content="https://mylandtoursandtravel.co.ke/og-image.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-brown: #2C1810;
+            --bg-brown-light: #3D2418;
+            --bg-brown-dark: #1A0F0A;
+            --sunset-gold: #E8A838;
+            --sunset-orange: #D4762C;
+            --sunset-yellow: #F5C842;
+            --cream: #F5E6D3;
+            --sage: #8B7355;
+            --glass: rgba(44, 24, 16, 0.85);
+            --glass-border: rgba(232, 168, 56, 0.2);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { 
+            scroll-behavior: smooth; 
+            overflow-x: hidden;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-brown);
+            color: var(--cream);
+            overflow-x: hidden;
+        }
+        .hero-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100vh;
+            z-index: -2;
+            background:
+                radial-gradient(ellipse at 20% 80%, rgba(61, 36, 24, 0.6) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(232, 168, 56, 0.15) 0%, transparent 50%),
+                linear-gradient(180deg, #1A0F0A 0%, #2C1810 50%, #1A0F0A 100%);
+        }
+        .stars {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .star {
+            position: absolute;
+            width: 2px; height: 2px;
+            background: var(--sunset-yellow);
+            border-radius: 50%;
+            animation: twinkle var(--duration) ease-in-out infinite;
+            opacity: 0;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: var(--opacity); transform: scale(1); }
+        }
+        .cursor {
+            position: fixed;
+            width: 20px; height: 20px;
+            border: 2px solid var(--sunset-gold);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.15s ease, opacity 0.15s ease;
+            mix-blend-mode: difference;
+        }
+        .cursor-follower {
+            position: fixed;
+            width: 8px; height: 8px;
+            background: var(--sunset-gold);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.08s ease;
+        }
+        nav {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            z-index: 10000;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+        nav.scrolled {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 0.8rem 4rem;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            z-index: 10001;
+        }
+        .logo-icon {
+            width: 55px; height: 55px;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 25px rgba(232, 168, 56, 0.4);
+            animation: logoPulse 3s ease-in-out infinite;
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange));
+        }
+        .logo-icon svg { width: 70%; height: 70%; }
+        @keyframes logoPulse {
+            0%, 100% { box-shadow: 0 0 25px rgba(232, 168, 56, 0.4); }
+            50% { box-shadow: 0 0 45px rgba(232, 168, 56, 0.7); }
+        }
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--cream);
+            letter-spacing: 1px;
+        }
+        .logo-text span { color: var(--sunset-gold); }
+        .nav-links {
+            display: flex;
+            gap: 1.2rem;
+            list-style: none;
+            z-index: 10001;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+        .nav-links a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: var(--sunset-gold);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover { color: var(--sunset-gold); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange)) !important;
+            color: var(--bg-brown-dark) !important;
+            padding: 0.8rem 2rem !important;
+            border-radius: 50px !important;
+            font-weight: 600 !important;
+            transition: all 0.3s ease !important;
+            border: none !important;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(232, 168, 56, 0.4);
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--sunset-gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10001;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 0 4rem;
+            overflow: hidden;
+        }
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            z-index: 2;
+            padding-top: 80px;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sunset-gold);
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        .hero-badge i { animation: pulse 2s ease-in-out infinite; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 7vw, 6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--sunset-gold) 50%, var(--sunset-yellow) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--sage);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange));
+            color: var(--bg-brown-dark);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(232, 168, 56, 0.4);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--cream);
+            border: 2px solid var(--sunset-gold);
+        }
+        .btn-outline:hover {
+            background: var(--sunset-gold);
+            color: var(--bg-brown-dark);
+            transform: translateY(-3px);
+        }
+.video-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+.video-bg video {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(26, 15, 10, 0.75) 0%,
+        rgba(26, 15, 10, 0.55) 40%,
+        rgba(26, 15, 10, 0.75) 100%
+    );
+    z-index: 1;
+}
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--sunset-gold), transparent);
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        .shape:nth-child(1) { width: 300px; height: 300px; top: 10%; left: -5%; animation-delay: 0s; }
+        .shape:nth-child(2) { width: 200px; height: 200px; top: 60%; right: -3%; animation-delay: 2s; }
+        .shape:nth-child(3) { width: 150px; height: 150px; bottom: 10%; left: 20%; animation-delay: 4s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--sage);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        .scroll-indicator i { font-size: 1.5rem; color: var(--sunset-gold); }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+        section { padding: 8rem 4rem; position: relative; }
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 5rem;
+        }
+        .section-label {
+            display: inline-block;
+            color: var(--sunset-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .section-label::before, .section-label::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40px; height: 1px;
+            background: var(--sunset-gold);
+            opacity: 0.5;
+        }
+        .section-label::before { right: calc(100% + 1rem); }
+        .section-label::after { left: calc(100% + 1rem); }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .section-header p {
+            color: var(--sage);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .destination-card {
+            position: relative;
+            height: 450px;
+            border-radius: 24px;
+            overflow: hidden;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease;
+        }
+        .destination-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(26, 15, 10, 0.95) 100%);
+            z-index: 1;
+            transition: opacity 0.4s ease;
+        }
+        .destination-card:hover::before {
+            background: linear-gradient(180deg, rgba(26, 15, 10, 0.3) 0%, rgba(26, 15, 10, 0.95) 100%);
+        }
+        .destination-card img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        .destination-card:hover img { transform: scale(1.1); }
+        .destination-content {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 2rem;
+            z-index: 2;
+            transform: translateZ(30px);
+        }
+        .destination-tag {
+            display: inline-block;
+            background: var(--sunset-gold);
+            color: var(--bg-brown-dark);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        .destination-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+        .destination-content p {
+            color: var(--sage);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+        .destination-card:hover .destination-content p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .destination-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: var(--sunset-gold);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .destination-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .packages-hero {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        .packages-hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--cream);
+            margin-bottom: 1rem;
+        }
+        .packages-hero p {
+            color: var(--sage);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .destination-selector {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .selector-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .selector-card {
+            background: linear-gradient(145deg, rgba(61, 36, 24, 0.8), rgba(26, 15, 10, 0.9));
+            border: 2px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .selector-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--sunset-gold), var(--sunset-orange));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .selector-card:hover::before,
+        .selector-card.selected::before {
+            transform: scaleX(1);
+        }
+        .selector-card:hover {
+            border-color: var(--sunset-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .selector-card.selected {
+            border-color: var(--sunset-gold);
+            background: linear-gradient(145deg, rgba(232, 168, 56, 0.1), rgba(26, 15, 10, 0.95));
+            box-shadow: 0 0 30px rgba(232, 168, 56, 0.15);
+        }
+        .selector-card.selected .check-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .selector-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+        .selector-header h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--cream);
+        }
+        .check-icon {
+            width: 28px; height: 28px;
+            background: var(--sunset-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-brown-dark);
+            font-size: 0.8rem;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+        }
+        .selector-card p {
+            color: var(--sage);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        .selector-meta {
+            display: flex;
+            gap: 1rem;
+            color: var(--sunset-gold);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .selector-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .inquiry-form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+            display: none;
+        }
+        .inquiry-form-container.active {
+            display: block;
+            animation: fadeInUp 0.6s ease;
+        }
+        .inquiry-form-container h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .inquiry-form-container .selected-destinations {
+            text-align: center;
+            color: var(--sunset-gold);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            min-height: 1.5rem;
+        }
+        .inquiry-form .form-group { margin-bottom: 1.5rem; }
+        .inquiry-form .form-group label {
+            display: block;
+            color: var(--sage);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .inquiry-form .form-group input,
+        .inquiry-form .form-group select,
+        .inquiry-form .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            background: rgba(61, 36, 24, 0.5);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--cream);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .inquiry-form .form-group input:focus,
+        .inquiry-form .form-group select:focus,
+        .inquiry-form .form-group textarea:focus {
+            outline: none;
+            border-color: var(--sunset-gold);
+            box-shadow: 0 0 20px rgba(232, 168, 56, 0.1);
+        }
+        .inquiry-form .form-group input::placeholder,
+        .inquiry-form .form-group textarea::placeholder { color: var(--sage); }
+        .inquiry-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .inquiry-form .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .inquiry-submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange));
+            color: var(--bg-brown-dark);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .inquiry-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(232, 168, 56, 0.4);
+        }
+        .no-selection-msg {
+            text-align: center;
+            color: var(--sage);
+            font-size: 1rem;
+            margin-top: 2rem;
+            padding: 2rem;
+            border: 2px dashed var(--glass-border);
+            border-radius: 16px;
+        }
+        .no-selection-msg i {
+            color: var(--sunset-gold);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .booking-note {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--sage);
+            margin-top: 1.5rem;
+            padding: 0.75rem;
+            background: rgba(232, 168, 56, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+        .booking-note i {
+            color: var(--sunset-gold);
+            margin-right: 0.3rem;
+        }
+        .experiences-section {
+            background: linear-gradient(180deg, var(--bg-brown) 0%, var(--bg-brown-light) 50%, var(--bg-brown) 100%);
+        }
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .experience-item {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        .experience-item:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            border-color: var(--sunset-gold);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .experience-item i {
+            font-size: 2.5rem;
+            color: var(--sunset-gold);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        .experience-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--cream);
+            margin-bottom: 0.75rem;
+        }
+        .experience-item p {
+            color: var(--sage);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .testimonial-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            position: relative;
+            transition: all 0.4s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--sunset-gold);
+        }
+        .testimonial-card::before {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            color: var(--sunset-gold);
+            opacity: 0.2;
+            position: absolute;
+            top: -0.5rem; left: 1.5rem;
+            line-height: 1;
+        }
+        .testimonial-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--cream);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .author-avatar {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--bg-brown-dark);
+            font-weight: 700;
+        }
+        .author-info h4 {
+            color: var(--cream);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .author-info p {
+            color: var(--sage);
+            font-size: 0.85rem;
+        }
+        .stars-rating {
+            color: var(--sunset-gold);
+            margin-top: 0.3rem;
+            font-size: 0.85rem;
+        }
+        .stats-section {
+            background: linear-gradient(135deg, var(--bg-brown-light), var(--bg-brown));
+            padding: 5rem 1rem;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .stat-item { position: relative; }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 8vw, 3.5rem);
+            font-weight: 900;
+            color: var(--sunset-gold);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            word-break: keep-all;
+        }
+        .stat-label {
+            color: var(--sage);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .vehicles-section {
+            background: linear-gradient(180deg, var(--bg-brown-dark) 0%, var(--bg-brown) 100%);
+        }
+        .vehicle-showcase {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .vehicle-carousel {
+            position: relative;
+            overflow: hidden;
+            border-radius: 24px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+        .vehicle-slides {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .vehicle-slide {
+            min-width: 100%;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .vehicle-image-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--bg-brown-dark);
+            cursor: grab;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .vehicle-image-container:active { cursor: grabbing; }
+        .vehicle-image-container img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            display: block;
+        }
+        .vehicle-image-container:hover img {
+            transform: scale(1.05);
+        }
+        .vehicle-zoom-hint {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--sunset-gold);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .vehicle-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--cream);
+            margin-bottom: 1rem;
+        }
+        .vehicle-info .vehicle-type {
+            display: inline-block;
+            background: var(--sunset-gold);
+            color: var(--bg-brown-dark);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+        .vehicle-info p {
+            color: var(--sage);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .vehicle-specs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .vehicle-spec {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--sage);
+            font-size: 0.95rem;
+        }
+        .vehicle-spec i {
+            color: var(--sunset-gold);
+            width: 30px;
+            text-align: center;
+        }
+        .vehicle-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem;
+        }
+        .vehicle-nav-btn {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            color: var(--sunset-gold);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .vehicle-nav-btn:hover {
+            background: var(--sunset-gold);
+            color: var(--bg-brown-dark);
+            transform: scale(1.1);
+        }
+        .vehicle-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            padding-bottom: 2rem;
+        }
+        .vehicle-dot {
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            background: var(--glass-border);
+            border: 2px solid var(--sunset-gold);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .vehicle-dot.active {
+            background: var(--sunset-gold);
+            transform: scale(1.2);
+        }
+        .vehicle-dot:hover {
+            background: var(--sunset-gold);
+            opacity: 0.7;
+        }
+        .sticker-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--sunset-gold);
+            color: var(--bg-brown-dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+        .contact-section {
+            background: linear-gradient(180deg, var(--bg-brown) 0%, var(--bg-brown-light) 100%);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+        }
+        .contact-info p {
+            color: var(--sage);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-detail i {
+            width: 50px; height: 50px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sunset-gold);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .contact-detail div h4 {
+            color: var(--cream);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .contact-detail div p {
+            color: var(--sage);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        .contact-detail div p a {
+            color: var(--sunset-gold);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        .contact-detail div p a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+        .contact-form {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label {
+            display: block;
+            color: var(--sage);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            background: rgba(61, 36, 24, 0.5);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--cream);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--sunset-gold);
+            box-shadow: 0 0 20px rgba(232, 168, 56, 0.1);
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: var(--sage); }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange));
+            color: var(--bg-brown-dark);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(232, 168, 56, 0.4);
+        }
+        footer {
+            background: var(--bg-brown-dark);
+            border-top: 1px solid var(--glass-border);
+            padding: 4rem 4rem 2rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto 3rem;
+        }
+        .footer-brand .logo { margin-bottom: 1.5rem; }
+        .footer-brand p {
+            color: var(--sage);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .footer-social a {
+            width: 45px; height: 45px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sunset-gold);
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .footer-social a:hover {
+            background: var(--sunset-gold);
+            color: var(--bg-brown-dark);
+            transform: translateY(-3px);
+        }
+        .footer-column h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+        }
+        .footer-column ul { list-style: none; }
+        .footer-column ul li { margin-bottom: 0.75rem; }
+        .footer-column ul li a {
+            color: var(--sage);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+        .footer-column ul li a:hover { color: var(--sunset-gold); }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+            color: var(--sage);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 1024px) {
+            .experiences-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .vehicle-slide { grid-template-columns: 1fr; }
+            .vehicle-image-container img { height: 300px; }
+            .inquiry-form .form-row { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.75rem;
+                padding: 0 0.5rem;
+            }
+            .stat-number {
+                font-size: clamp(1.3rem, 9vw, 1.8rem);
+            }
+            .stat-label {
+                font-size: 0.75rem;
+                letter-spacing: 1px;
+            }
+        }
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; }
+            nav.scrolled { padding: 0.8rem 1.5rem; }
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            section { padding: 5rem 1.5rem; }
+            .hero { padding: 0 1.5rem; }
+            .destinations-grid { grid-template-columns: 1fr; }
+            .selector-grid { grid-template-columns: 1fr; }
+            .experiences-grid { grid-template-columns: 1fr; }
+            .stats-grid { 
+                grid-template-columns: 1fr 1fr; 
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+            .stat-number {
+                font-size: clamp(1.5rem, 10vw, 2.2rem);
+            }
+            .stat-label {
+                font-size: 0.8rem;
+            }
+            .footer-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .cursor, .cursor-follower { display: none; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .vehicle-specs { grid-template-columns: 1fr; }
+            .vehicle-nav-btn { width: 40px; height: 40px; }
+            .inquiry-form-container { padding: 2rem 1.5rem; }
+            .hero-content { padding-top: 60px; }
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: var(--bg-brown-dark);
+            z-index: 100000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-logo {
+            width: 100px; height: 100px;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: loaderPulse 1.5s ease-in-out infinite;
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange));
+        }
+        .loader-logo svg { width: 60%; height: 60%; }
+        @keyframes loaderPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(232, 168, 56, 0.3); }
+            50% { transform: scale(1.1); box-shadow: 0 0 60px rgba(232, 168, 56, 0.6); }
+        }
+        .loader-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--cream);
+            letter-spacing: 3px;
+        }
+        .loader-bar {
+            width: 200px; height: 3px;
+            background: var(--glass);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .loader-bar-inner {
+            width: 0%; height: 100%;
+            background: linear-gradient(90deg, var(--sunset-gold), var(--sunset-yellow));
+            border-radius: 3px;
+            animation: loadProgress 2s ease-in-out forwards;
+        }
+        @keyframes loadProgress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        .services-highlight {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-highlight-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+        .service-highlight-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--sunset-gold);
+        }
+        .service-highlight-card i {
+            font-size: 2.5rem;
+            color: var(--sunset-gold);
+            margin-bottom: 1.5rem;
+        }
+        .service-highlight-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--cream);
+            margin-bottom: 1rem;
+        }
+        .service-highlight-card p {
+            color: var(--sage);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .services-highlight { grid-template-columns: 1fr; }
+        }
+        .legal-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 20000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        .legal-modal-overlay.active {
+            display: flex;
+        }
+        .legal-modal {
+            background: var(--bg-brown);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 85vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            animation: modalSlideIn 0.4s ease;
+        }
+        @keyframes modalSlideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .legal-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--glass-border);
+            background: var(--bg-brown-dark);
+        }
+        .legal-modal-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--cream);
+        }
+        .legal-modal-close {
+            background: none;
+            border: none;
+            color: var(--sunset-gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .legal-modal-close:hover {
+            background: var(--glass);
+        }
+        .legal-modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            color: var(--sage);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        .legal-modal-body h4 {
+            color: var(--sunset-gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        .legal-modal-body h4:first-child {
+            margin-top: 0;
+        }
+        .legal-modal-body p {
+            margin-bottom: 1rem;
+        }
+        .legal-modal-body ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+        }
+        .legal-modal-body li {
+            margin-bottom: 0.5rem;
+        }
+        .legal-modal-body strong {
+            color: var(--cream);
+        }
+        .legal-tabs {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0 2rem;
+            border-bottom: 1px solid var(--glass-border);
+            background: var(--bg-brown-dark);
+            overflow-x: auto;
+        }
+        .legal-tab {
+            padding: 1rem 1.5rem;
+            background: none;
+            border: none;
+            color: var(--sage);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .legal-tab:hover {
+            color: var(--sunset-gold);
+        }
+        .legal-tab.active {
+            color: var(--sunset-gold);
+            border-bottom-color: var(--sunset-gold);
+        }
+        .legal-content {
+            display: none;
+        }
+        .legal-content.active {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .shape { display: none; }
+        } 
+
+/* ===== MODE SELECTOR ===== */
+.mode-selector {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+}
+.mode-card {
+    background: linear-gradient(145deg, rgba(61, 36, 24, 0.8), rgba(26, 15, 10, 0.9));
+    border: 2px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+.mode-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--sunset-orange));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+.mode-card:hover::before {
+    transform: scaleX(1);
+}
+.mode-card:hover {
+    border-color: var(--sunset-gold);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+.mode-card.active {
+    border-color: var(--sunset-gold);
+    background: linear-gradient(145deg, rgba(232, 168, 56, 0.1), rgba(26, 15, 10, 0.95));
+    box-shadow: 0 0 30px rgba(232, 168, 56, 0.15);
+}
+.mode-card.active::before {
+    transform: scaleX(1);
+}
+.mode-icon {
+    width: 80px; height: 80px;
+    background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: var(--bg-brown-dark);
+    transition: transform 0.3s ease;
+}
+.mode-card:hover .mode-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+.mode-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 1rem;
+}
+.mode-card p {
+    color: var(--sage);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+.mode-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange));
+    color: var(--bg-brown-dark);
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+.mode-card:hover .mode-btn {
+    transform: translateX(5px);
+    box-shadow: 0 10px 30px rgba(232, 168, 56, 0.3);
+}
+.mode-back {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.mode-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--sunset-gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ===== PACKAGE CARDS (styled like Destinations section) ===== */
+.package-card {
+    position: relative;
+    height: 450px;
+    border-radius: 24px;
+    overflow: hidden;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    border: 2px solid var(--glass-border);
+}
+.package-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 30%, rgba(26, 15, 10, 0.95) 100%);
+    z-index: 1;
+    transition: opacity 0.4s ease;
+}
+.package-card:hover::before {
+    background: linear-gradient(180deg, rgba(26, 15, 10, 0.3) 0%, rgba(26, 15, 10, 0.95) 100%);
+}
+.package-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+    position: absolute;
+    inset: 0;
+}
+.package-card:hover img {
+    transform: scale(1.1);
+}
+.package-card.selected {
+    border-color: var(--sunset-gold);
+    box-shadow: 0 0 30px rgba(232, 168, 56, 0.15);
+}
+.package-card .check-icon {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    width: 36px; height: 36px;
+    background: var(--sunset-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-brown-dark);
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    z-index: 4;
+}
+.package-card.selected .check-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+.package-content {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 2rem;
+    z-index: 2;
+    transform: translateZ(30px);
+}
+.package-tag {
+    display: inline-block;
+    background: var(--sunset-gold);
+    color: var(--bg-brown-dark);
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+.package-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+}
+.package-content p {
+    color: var(--sage);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+.package-card:hover .package-content p,
+.package-card.selected .package-content p {
+    opacity: 1;
+    transform: translateY(0);
+}
+.package-meta {
+    display: flex;
+    gap: 1.5rem;
+    color: var(--sunset-gold);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.package-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+@media (max-width: 768px) {
+    .mode-selector {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    .mode-card {
+        padding: 2rem 1.5rem;
+    }
+    .package-card {
+        height: 400px;
+    }
+    .package-content h3 {
+        font-size: 1.5rem;
+    }
+}     
+    </style>
+</head>
+<body>
+<!-- AUDIO OVERLAY: Click to Enter (Shows Once) -->
+<style>
+#audio-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2C1810 0%, #1a0f0a 100%);
+    z-index: 100000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #F5E6D3;
+    font-family: 'Playfair Display', serif;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    padding: 2rem;
+    text-align: center;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+#audio-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+#audio-overlay h1 {
+    font-size: clamp(32px, 8vw, 48px);
+    color: #E8A838;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+#audio-overlay p {
+    font-size: clamp(16px, 4vw, 20px);
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+#audio-overlay .btn-music {
+    background: #E8A838;
+    color: #2C1810;
+    border: none;
+    padding: clamp(14px, 4vw, 18px) clamp(30px, 8vw, 50px);
+    font-size: clamp(14px, 3.5vw, 18px);
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 12px;
+    width: 100%;
+    max-width: 320px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#audio-overlay .btn-music:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(232,168,56,0.3);
+}
+#audio-overlay .btn-silent {
+    background: transparent;
+    color: #F5E6D3;
+    border: 1px solid rgba(232,168,56,0.4);
+    padding: clamp(10px, 3vw, 12px) clamp(25px, 6vw, 35px);
+    font-size: clamp(12px, 3vw, 14px);
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s;
+    width: 100%;
+    max-width: 280px;
+    min-height: 40px;
+}
+#audio-overlay .btn-silent:hover {
+    border-color: #E8A838;
+    color: #E8A838;
+}
+#audio-overlay .verse {
+    font-style: italic;
+    font-size: clamp(13px, 3vw, 16px);
+    margin-top: 25px;
+    opacity: 0.6;
+    max-width: 400px;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+#audio-overlay .kenya-message {
+    font-size: clamp(13px, 3vw, 16px);
+    margin-top: 15px;
+    opacity: 0.7;
+    max-width: 350px;
+    line-height: 1.5;
+    padding: 0 1rem;
+}
+
+/* ===== AUDIO PLAYER - COMPACT & MOBILE RESPONSIVE ===== */
+#audio-player {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    z-index: 9999;
+    background: rgba(44,24,16,0.92);
+    border: 1px solid rgba(232, 168, 56, 0.3);
+    border-radius: 24px;
+    padding: 6px 12px;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+#audio-player:hover {
+    border-color: rgba(232, 168, 56, 0.6);
+    box-shadow: 0 6px 25px rgba(232,168,56,0.15);
+}
+#audio-label {
+    color: #E8A838;
+    font-size: 11px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+#audio-toggle {
+    background: #E8A838;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    color: #2C1810;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    padding: 0;
+    line-height: 1;
+}
+#audio-toggle:hover {
+    transform: scale(1.1);
+    background: #F5C842;
+}
+#audio-toggle:active {
+    transform: scale(0.95);
+}
+#audio-volume {
+    width: 50px;
+    accent-color: #E8A838;
+    cursor: pointer;
+    height: 4px;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+    #audio-player {
+        bottom: 10px;
+        right: 10px;
+        padding: 5px 10px;
+        gap: 6px;
+        border-radius: 20px;
+    }
+    #audio-label {
+        font-size: 10px;
+    }
+    #audio-toggle {
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
+    }
+    #audio-volume {
+        width: 40px;
+    }
+    #audio-overlay {
+        padding: 1.5rem;
+    }
+    #audio-overlay .btn-music {
+        max-width: 280px;
+    }
+    #audio-overlay .btn-silent {
+        max-width: 240px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    #audio-player {
+        bottom: 8px;
+        right: 8px;
+        padding: 4px 8px;
+        gap: 5px;
+    }
+    #audio-label {
+        font-size: 9px;
+    }
+    #audio-toggle {
+        width: 22px;
+        height: 22px;
+        font-size: 9px;
+    }
+    #audio-volume {
+        width: 35px;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    #audio-overlay {
+        justify-content: flex-start;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+    #audio-overlay h1 {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+    #audio-overlay p {
+        margin-bottom: 15px;
+    }
+    #audio-overlay .btn-music {
+        padding: 10px 30px;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    #audio-overlay .btn-silent {
+        padding: 8px 25px;
+        font-size: 12px;
+    }
+    #audio-overlay .verse {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+    #audio-overlay .kenya-message {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+}
+</style>
+
+<div id="audio-overlay">
+    <h1>MY LAND</h1>
+    <p>Tours & Travel</p>
+    <button class="btn-music" id="btn-enter-music">🎵 Enter with Music</button>
+    <button class="btn-silent" id="btn-enter-silent">Enter Silently</button>
+    <p class="kenya-message">"Kenya is more than a destination—it's a feeling that stays with you long after the journey ends."</p> Karibu Kenya!
+</div>
+
+<!-- Audio Player (hidden until overlay dismissed) -->
+<div id="audio-player">
+    <span id="audio-label">🎵 My Land is Kenya</span>
+    <button id="audio-toggle">▶</button>
+    <input type="range" id="audio-volume" min="0" max="100" value="30">
+</div>
+
+<div id="yt-container" style="position: fixed; bottom: 0; right: 0; width: 1px; height: 1px; z-index: -1; overflow: hidden; opacity: 0; pointer-events: none;">    
+    <iframe id="yt-player" src="https://www.youtube.com/embed/gUKe7Q0N0-4?enablejsapi=1&autoplay=0&mute=0&controls=0" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+</div>
+
+<script>
+// Check if user has already visited
+var player;
+var isPlaying = false;
+var audioStarted = false;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('yt-player', {
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+function onPlayerReady(event) {
+    playerReady = true;
+    
+    player.setVolume(50);
+    
+    player.cueVideoById('gUKe7Q0N0-4');
+    
+    var savedTime = localStorage.getItem('audioTime');
+    if (savedTime) {
+        player.seekTo(parseFloat(savedTime), true);
+    }
+
+    // ALWAYS show overlay on every page load
+    document.getElementById('audio-overlay').style.display = 'flex';
+    document.getElementById('audio-player').style.display = 'none';
+    isPlaying = false;
+    updateButton();
+    
+    // Hide loader if minimum time has passed
+    setTimeout(hideLoader, 100);
+}
+
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+        isPlaying = true;
+    } else if (event.data == YT.PlayerState.PAUSED) {
+        isPlaying = false;
+    }
+    updateButton();
+}
+
+// Enter with Music
+document.getElementById('btn-enter-music').addEventListener('click', function() {
+    localStorage.setItem('audioPlaying', 'true');
+
+    document.getElementById('audio-overlay').classList.add('hidden');
+    setTimeout(() => {
+        document.getElementById('audio-overlay').style.display = 'none';
+        document.getElementById('audio-player').style.display = 'flex';
+    }, 600);
+
+    if (player && player.playVideo) {
+        // Force load and play
+        player.loadVideoById('gUKe7Q0N0-4');
+        player.unMute();
+        player.playVideo();
+        isPlaying = true;
+        audioStarted = true;
+        updateButton();
+    }
+});
+
+// Enter Silently
+document.getElementById('btn-enter-silent').addEventListener('click', function() {
+    localStorage.setItem('audioPlaying', 'false');
+
+    document.getElementById('audio-overlay').classList.add('hidden');
+    document.getElementById('audio-player').style.display = 'none';
+
+    if (player && player.pauseVideo) {
+        player.pauseVideo();
+    }
+});
+
+// Before unload
+window.addEventListener('beforeunload', function() {
+    if (player && player.getCurrentTime) {
+        localStorage.setItem('audioTime', player.getCurrentTime());
+        localStorage.setItem('audioPlaying', isPlaying);
+    }
+});
+
+// Toggle button
+document.getElementById('audio-toggle').addEventListener('click', function() {
+    if (!player || !player.getPlayerState) return;
+    
+    if (isPlaying) {
+        player.pauseVideo();
+    } else {
+        player.unMute();
+        player.playVideo();
+    }
+});
+
+// Volume
+document.getElementById('audio-volume').addEventListener('input', function(e) {
+    if (player && player.setVolume) {
+        player.setVolume(e.target.value);
+    }
+});
+
+function updateButton() {
+    var btn = document.getElementById('audio-toggle');
+    if (btn) {
+        btn.textContent = isPlaying ? '⏸' : '▶';
+    }
+}
+</script>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<!-- END AUDIO OVERLAY -->
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="logo-icon">
+          <img src="your-logo.png" alt="My Land Tours and Travel" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+        <div class="loader-text">My Land Tours and Travel</div>
+        <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Animated Background -->
+    <div class="hero-bg"></div>
+    <div class="stars" id="stars"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <img src="your-logo.png" alt="My Land Tours and Travel" style="width:100%;height:100%;object-fit:contain;">
+            </div>
+            <div class="logo-text">My Land <span>Tours</span></div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#destinations">Destinations</a></li>
+            <li><a href="index.html#vehicles">Fleet</a></li>
+            <li><a href="index.html#packages">Packages</a></li>
+            <li><a href="index.html#experiences">Experiences</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="index.html#testimonials">Reviews</a></li>
+            <li><a href="index.html#contact" class="nav-cta">Book Now</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="video-bg">
+            <video autoplay muted loop playsinline poster="your-video.mp4">
+                <source src="your-video.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i>
+                Nairobi's Premier Safari Experience
+            </div>
+            <h1>Discover the<br>Wild Heart of Africa</h1>
+            <p>Embark on extraordinary journeys through Kenya's most breathtaking landscapes. From the endless plains of the Maasai Mara to the turquoise waters of Diani — your adventure begins here.</p>
+            <div class="hero-buttons">
+                <a href="#packages" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Explore Packages
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-calendar-check"></i>
+                    Plan Your Trip
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item reveal">
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-number" data-target="5000">0</div>
+                <div class="stat-label">Happy Travelers</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-number" data-target="20">0</div>
+                <div class="stat-label">Destinations</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-number" data-target="95">0</div>
+                <div class="stat-label">% Satisfaction</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations">
+        <div class="section-header reveal">
+            <div class="section-label">Explore</div>
+            <h2>Kenya's Iconic Destinations</h2>
+            <p>Journey through Kenya's most celebrated national parks, reserves, and coastal gems.</p>
+        </div>
+        <div class="destinations-grid">
+            <div class="destination-card reveal">
+                <img src="1.png" alt="Maasai Mara" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Big Five</span>
+                    <h3>Maasai Mara</h3>
+                    <p>Witness the Great Migration across endless golden savannas. Home to the highest concentration of wildlife on Earth.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 3-7 Days</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Southwest Kenya</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="2.png" alt="Amboseli" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Photography</span>
+                    <h3>Amboseli</h3>
+                    <p>Iconic elephant herds against the backdrop of Mount Kilimanjaro. A photographer's paradise.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 2-4 Days</span>
+                        <span><i class="fas fa-map-marker-alt"></i> South Kenya</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="lake-nakuru-flamingos.jpg" alt="Lake Nakuru flamingos" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Birding</span>
+                    <h3>Lake Nakuru</h3>
+                    <p>The pink lake alive with flamingos. A rhino sanctuary and birdwatcher's haven in the Great Rift Valley.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 1-2 Days</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Central Kenya</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="samburu.jpg" alt="Samburu" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Exclusive</span>
+                    <h3>Samburu</h3>
+                    <p>Remote wilderness in Kenya's arid north. Spot the rare "Samburu Special Five" in uncrowded landscapes.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 3-5 Days</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Northern Kenya</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="diani.png" alt="Diani Beach" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Beach</span>
+                    <h3>Diani Beach</h3>
+                    <p>Pristine white sands and turquoise waters on Kenya's coast. The perfect post-safari relaxation destination.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 3-7 Days</span>
+                        <span><i class="fas fa-map-marker-alt"></i> South Coast</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="tsavo.jpg" alt="Tsavo" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Adventure</span>
+                    <h3>Tsavo</h3>
+                    <p>Kenya's largest national park. Red-dust elephants, volcanic landscapes, and legendary man-eaters' territory.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 2-4 Days</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Southeast Kenya</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="mtkenya2.jpg" alt="Mount Kenya" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Trekking</span>
+                    <h3>Mount Kenya</h3>
+                    <p>Africa's second highest peak. Alpine meadows, glaciers, and unique high-altitude wildlife await.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 4-6 Days</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Central Kenya</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="li.png" alt="Lamu Island" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Culture</span>
+                    <h3>Lamu Island</h3>
+                    <p>A UNESCO World Heritage site. Ancient Swahili culture, dhow sailing, and timeless coastal charm.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 3-5 Days</span>
+                        <span><i class="fas fa-map-marker-alt"></i> North Coast</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="aberdare.jpg" alt="Aberdare" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Forest</span>
+                    <h3>Aberdare National Park</h3>
+                    <p>Misty moorlands, waterfalls, and tree-house lodges. Spot the elusive bongo antelope.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 2-3 Days</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Central Highlands</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="ol-pejeta.png" alt="Ol Pejeta" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Conservation</span>
+                    <h3>Ol Pejeta Conservancy</h3>
+                    <p>Home to the last two northern white rhinos. A world-leading conservation success story.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 1-2 Days</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Laikipia</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="wmp.jpg" alt="Watamu" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Marine</span>
+                    <h3>Watamu Marine Park</h3>
+                    <p>World-class snorkeling and diving. Sea turtles, dolphins, and vibrant coral reefs.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 2-4 Days</span>
+                        <span><i class="fas fa-map-marker-alt"></i> North Coast</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="hells-gate.jpg" alt="Hell's Gate" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Active</span>
+                    <h3>Hell's Gate</h3>
+                    <p>The only park where you can cycle and walk among wildlife. Dramatic gorges and hot springs.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 1 Day</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Great Rift Valley</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="nnp.png" alt="Nairobi National Park" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Wild</span>
+                    <h3>Nairobi National Park</h3>
+                    <p>The only national park in the world, located inside a major city and serving as a sanctuary for black rhinos.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 1 Day</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Nairobi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="seo.jpg" alt="Sheldrick Elephant Orphanage/Giraffe center" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Orphanage</span>
+                    <h3>Sheldrick Elephant Orphanage/Giraffe center</h3>
+                    <p>The place where you get close up with rescued elephants from all around Kenya.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 1 Day</span>
+                        <span><i class="fas fa-map-marker-alt"></i>Nairobi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card reveal">
+                <img src="cft.jpg" alt="Coffee/Tea" loading="lazy">
+                <div class="destination-content">
+                    <span class="destination-tag">Educational</span>
+                    <h3>Coffee/Tea farm tour</h3>
+                    <p>Get a close up tour on how the world's most famous coffee is grown.</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-clock"></i> 1 Day</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Central Kenya</span>
+                    </div>
+                </div>
+            </div>                                    
+        </div>
+    </section>
+
+    <!-- Vehicle Showcase Section -->
+    <section id="vehicles" class="vehicles-section">
+        <div class="section-header reveal">
+            <div class="section-label">Our Fleet</div>
+            <h2>Safari Vehicles</h2>
+            <p>Travel in comfort and style with our professionally maintained safari fleet. Each vehicle is equipped for the ultimate wildlife experience.</p>
+        </div>
+        <div class="vehicle-showcase reveal">
+            <div class="vehicle-carousel">
+                <div class="vehicle-slides" id="vehicleSlides">
+                    <div class="vehicle-slide">
+                        <div class="vehicle-image-container" id="cruiserImg">
+                            <span class="sticker-overlay">My Land Tours</span>
+                            <img src="cruiser.jpg" alt="Safari Land Cruiser" id="cruiserImage" loading="lazy">
+                            <div class="vehicle-zoom-hint">
+                                <i class="fas fa-search-plus"></i> Hover to zoom
+                            </div>
+                        </div>
+                        <div class="vehicle-info">
+                            <span class="vehicle-type">4x4 Safari Jeep</span>
+                            <h3>Toyota Land Cruiser</h3>
+                            <p>Our flagship safari vehicle. Custom-fitted with pop-up roof, charging ports, and premium seating. Built for the toughest terrain while keeping you comfortable.</p>
+                            <div class="vehicle-specs">
+                                <div class="vehicle-spec"><i class="fas fa-users"></i> 6-7 Passengers</div>
+                                <div class="vehicle-spec"><i class="fas fa-snowflake"></i> Air Conditioned</div>
+                                <div class="vehicle-spec"><i class="fas fa-charging-station"></i> Charging Ports</div>
+                                <div class="vehicle-spec"><i class="fas fa-binoculars"></i> Pop-Up Roof</div>
+                                <div class="vehicle-spec"><i class="fas fa-wifi"></i> WiFi Available</div>
+                                <div class="vehicle-spec"><i class="fas fa-shield-alt"></i> First Aid Kit</div>
+                            </div>
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-calendar-check"></i> Book This Vehicle
+                            </a>
+                        </div>
+                    </div>
+                    <div class="vehicle-slide">
+                        <div class="vehicle-image-container" id="vanImg">
+                            <span class="sticker-overlay">My Land Tours</span>
+                            <img src="van.jpg" alt="Safari Van" id="vanImage" loading="lazy">
+                            <div class="vehicle-zoom-hint">
+                                <i class="fas fa-search-plus"></i> Hover to zoom
+                            </div>
+                        </div>
+                        <div class="vehicle-info">
+                            <span class="vehicle-type">Safari Van</span>
+                            <h3>Toyota Hiace Safari Van</h3>
+                            <p>Spacious safari van with pop-up roof and custom canvas. Perfect for mid-size groups seeking comfort and excellent wildlife viewing angles.</p>
+                            <div class="vehicle-specs">
+                                <div class="vehicle-spec"><i class="fas fa-users"></i> 8-9 Passengers</div>
+                                <div class="vehicle-spec"><i class="fas fa-snowflake"></i> Air Conditioned</div>
+                                <div class="vehicle-spec"><i class="fas fa-charging-station"></i> Charging Ports</div>
+                                <div class="vehicle-spec"><i class="fas fa-binoculars"></i> Pop-Up Roof</div>
+                                <div class="vehicle-spec"><i class="fas fa-wifi"></i> WiFi Available</div>
+                                <div class="vehicle-spec"><i class="fas fa-shield-alt"></i> First Aid Kit</div>
+                            </div>
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-calendar-check"></i> Book This Vehicle
+                            </a>
+                        </div>
+                    </div>
+                    <div class="vehicle-slide">
+                        <div class="vehicle-image-container" id="busImg">
+                            <span class="sticker-overlay">My Land Tours</span>
+                            <img src="coaster.jpg" alt="Coaster Bus" id="busImage" loading="lazy">
+                            <div class="vehicle-zoom-hint">
+                                <i class="fas fa-search-plus"></i> Hover to zoom
+                            </div>
+                        </div>
+                        <div class="vehicle-info">
+                            <span class="vehicle-type">Group Transport</span>
+                            <h3>Toyota Coaster Bus</h3>
+                            <p>Our 25-seater coaster bus is ideal for large groups, corporate retreats, and school trips. Comfortable reclining seats with panoramic windows.</p>
+                            <div class="vehicle-specs">
+                                <div class="vehicle-spec"><i class="fas fa-users"></i> 25 Passengers</div>
+                                <div class="vehicle-spec"><i class="fas fa-snowflake"></i> Air Conditioned</div>
+                                <div class="vehicle-spec"><i class="fas fa-tv"></i> Entertainment System</div>
+                                <div class="vehicle-spec"><i class="fas fa-suitcase"></i> Large Luggage Space</div>
+                                <div class="vehicle-spec"><i class="fas fa-wifi"></i> WiFi Available</div>
+                                <div class="vehicle-spec"><i class="fas fa-shield-alt"></i> First Aid Kit</div>
+                            </div>
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-calendar-check"></i> Book This Vehicle
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="vehicle-dots" id="vehicleDots">
+                    <div class="vehicle-dot active" data-slide="0"></div>
+                    <div class="vehicle-dot" data-slide="1"></div>
+                    <div class="vehicle-dot" data-slide="2"></div>
+                </div>
+                <div class="vehicle-nav">
+                    <button class="vehicle-nav-btn" id="prevVehicle"><i class="fas fa-chevron-left"></i></button>
+                    <button class="vehicle-nav-btn" id="nextVehicle"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Highlight -->
+    <section class="services-highlight-section" style="background: var(--bg-brown-dark); padding: 6rem 4rem;">
+        <div class="section-header reveal">
+            <div class="section-label">Services</div>
+            <h2>What We Offer</h2>
+            <p>Beyond safaris — comprehensive travel solutions for every need.</p>
+        </div>
+        <div class="services-highlight">
+            <div class="service-highlight-card reveal">
+                <i class="fas fa-hotel"></i>
+                <h4>Hotel Bookings</h4>
+                <p>From luxury lodges to budget camps, we secure the best accommodations for your safari and beach holidays across Kenya and East Africa.</p>
+            </div>
+            <div class="service-highlight-card reveal">
+                <i class="fas fa-plane-arrival"></i>
+                <h4>Airport Transfers</h4>
+                <p>Reliable pickup and drop-off services from Jomo Kenyatta International Airport (JKIA) and Wilson Airport in our comfortable vans or coaster buses.</p>
+            </div>
+            <div class="service-highlight-card reveal">
+                <i class="fas fa-route"></i>
+                <h4>Custom Itineraries</h4>
+                <p>We design personalized safari routes combining multiple destinations, experiences, and accommodations tailored to your preferences and budget.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+<section id="packages">
+    <div class="section-header reveal">
+        <div class="section-label">Packages</div>
+        <h2>Choose Your Adventure</h2>
+        <p>How would you like to plan your safari? Select an option below to get started.</p>
+    </div>
+
+    <!-- MODE SELECTOR -->
+    <div class="mode-selector" id="modeSelector">
+        <div class="mode-card" id="modeBuild" onclick="selectMode('build')">
+            <div class="mode-icon"><i class="fas fa-compass"></i></div>
+            <h3>Build Your Own Safari</h3>
+            <p>Hand-pick your destinations and create a fully customized itinerary. Perfect for travelers who know exactly where they want to go.</p>
+            <span class="mode-btn">Start Building <i class="fas fa-arrow-right"></i></span>
+        </div>
+        <div class="mode-card" id="modeBrowse" onclick="selectMode('browse')">
+            <div class="mode-icon"><i class="fas fa-map"></i></div>
+            <h3>Browse Packages</h3>
+            <p>Choose from our curated safari packages designed by experts. Each package includes hand-picked destinations, accommodations, and experiences.</p>
+            <span class="mode-btn">Browse Packages <i class="fas fa-arrow-right"></i></span>
+        </div>
+    </div>
+
+    <!-- BUILD YOUR OWN SAFARI -->
+    <div class="destination-selector" id="buildSection" style="display:none;">
+        <div class="mode-back">
+            <span class="mode-tag"><i class="fas fa-compass"></i> Build Your Own Safari</span>
+        </div>
+        <div class="selector-grid" id="buildGrid">
+            <div class="selector-card" data-destination="Maasai Mara">
+                <div class="selector-header">
+                    <h4>Maasai Mara</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Witness the Great Migration across endless golden savannas.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 3-7 Days</span>
+                    <span><i class="fas fa-star"></i> Big Five</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Amboseli">
+                <div class="selector-header">
+                    <h4>Amboseli</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Iconic elephant herds with Mount Kilimanjaro backdrop.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 2-4 Days</span>
+                    <span><i class="fas fa-camera"></i> Photography</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Lake Nakuru">
+                <div class="selector-header">
+                    <h4>Lake Nakuru</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Pink flamingos and rhino sanctuary in the Rift Valley.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 1-2 Days</span>
+                    <span><i class="fas fa-dove"></i> Birding</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Samburu">
+                <div class="selector-header">
+                    <h4>Samburu</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Remote wilderness and the rare Samburu Special Five.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 3-5 Days</span>
+                    <span><i class="fas fa-gem"></i> Exclusive</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Tsavo">
+                <div class="selector-header">
+                    <h4>Tsavo</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Kenya's largest park with red elephants and volcanic landscapes.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 2-4 Days</span>
+                    <span><i class="fas fa-mountain"></i> Adventure</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Diani Beach">
+                <div class="selector-header">
+                    <h4>Diani Beach</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Pristine white sands and turquoise waters on the coast.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 3-7 Days</span>
+                    <span><i class="fas fa-umbrella-beach"></i> Beach</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Mount Kenya">
+                <div class="selector-header">
+                    <h4>Mount Kenya</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Alpine meadows, glaciers, and high-altitude trekking.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 4-6 Days</span>
+                    <span><i class="fas fa-hiking"></i> Trekking</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Lamu Island">
+                <div class="selector-header">
+                    <h4>Lamu Island</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>UNESCO World Heritage Swahili culture and dhow sailing.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 3-5 Days</span>
+                    <span><i class="fas fa-landmark"></i> Culture</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Aberdare">
+                <div class="selector-header">
+                    <h4>Aberdare</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Misty moorlands, waterfalls, and tree-house lodges.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 2-3 Days</span>
+                    <span><i class="fas fa-tree"></i> Forest</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Ol Pejeta">
+                <div class="selector-header">
+                    <h4>Ol Pejeta</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Home to the last northern white rhinos. Conservation leader.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 1-2 Days</span>
+                    <span><i class="fas fa-paw"></i> Conservation</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Watamu">
+                <div class="selector-header">
+                    <h4>Watamu</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>World-class snorkeling, sea turtles, and coral reefs.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 2-4 Days</span>
+                    <span><i class="fas fa-water"></i> Marine</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Hell's Gate">
+                <div class="selector-header">
+                    <h4>Hell's Gate</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Cycle and walk among wildlife. Dramatic gorges.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 1 Day</span>
+                    <span><i class="fas fa-bicycle"></i> Active</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Nairobi National Park">
+                <div class="selector-header">
+                    <h4>Nairobi National Park</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Visit the only National Park in the world inside a city.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 1 Day</span>
+                    <span><i class="fas fa-mountain"></i> Adventure</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Sheldrick Elephant Orphanage/Giraffe center">
+                <div class="selector-header">
+                    <h4>Sheldrick Elephant Orphanage/Giraffe center</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Get to see rescued elephants and giraffes from all around Kenya.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 1 Day</span>
+                    <span><i class="fas fa-paw"></i> Conservation</span>
+                </div>
+            </div>
+            <div class="selector-card" data-destination="Coffee/Tea farm tour">
+                <div class="selector-header">
+                    <h4>Coffee/Tea farm tour.</h4>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+                <p>Get a front row seat to how the world's most famous coffee is grown.</p>
+                <div class="selector-meta">
+                    <span><i class="fas fa-clock"></i> 1 Day</span>
+                    <span><i class="fas fa-graduation-cap"></i> Education</span>
+                </div>
+            </div>
+        </div>
+        <div class="no-selection-msg" id="noSelectionMsg">
+            <i class="fas fa-hand-pointer"></i>
+            Click on the destinations above to select where you want to go
+        </div>
+        <div class="inquiry-form-container" id="inquiryFormContainer">
+            <h3>Plan Your Safari</h3>
+            <p class="selected-destinations" id="selectedDestinations"></p>
+            <form class="inquiry-form" id="destinationInquiryForm" action="https://formsubmit.co/info@mylandtours.co.ke" method="POST">
+                <input type="hidden" name="_subject" value="New Safari Inquiry - My Land Tours">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="thank-you.html">
+                <input type="hidden" name="bookingType" id="bookingType" value="">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" name="firstName" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" name="lastName" placeholder="Doe" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone / WhatsApp</label>
+                    <input type="tel" name="phone" placeholder="+254 700 000000">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Travel Dates</label>
+                        <input type="date" name="travelDate">
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Travelers</label>
+                        <select name="travelers">
+                            <option>1 Person</option>
+                            <option>2 People</option>
+                            <option>3-4 People</option>
+                            <option>5+ People</option>
+                            <option>Group / Corporate</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Vehicle</label>
+                    <select name="vehicle" required>
+                        <option value="">Select a vehicle...</option>
+                        <option value="Toyota Land Cruiser (4x4 Safari Jeep)">Toyota Land Cruiser — 4x4 Safari Jeep (6-7 pax)</option>
+                        <option value="Toyota Hiace Safari Van">Toyota Hiace Safari Van (8-9 pax)</option>
+                        <option value="Toyota Coaster Bus">Toyota Coaster Bus — Group Transport (25 pax)</option>
+                        <option value="Not Sure / Recommend">Not Sure — Recommend Best Option</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Number of Days</label>
+                    <select name="days" required>
+                        <option value="">How many days?</option>
+                        <option value="1 Day">1 Day</option>
+                        <option value="2 Days">2 Days</option>
+                        <option value="3 Days">3 Days</option>
+                        <option value="4 Days">4 Days</option>
+                        <option value="5 Days">5 Days</option>
+                        <option value="6 Days">6 Days</option>
+                        <option value="7 Days">7 Days</option>
+                        <option value="7+ Days">7+ Days</option>
+                        <option value="Not Sure">Not Sure Yet</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Budget Preference</label>
+                    <select name="budget">
+                        <option>Budget / Explorer</option>
+                        <option>Mid-Range / Discovery</option>
+                        <option>Luxury</option>
+                        <option>Not Sure Yet</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Additional Details</label>
+                    <textarea name="message" placeholder="Tell us about your dream safari, special requests, dietary needs, celebration plans..."></textarea>
+                </div>
+                <input type="hidden" name="selectedDestinations" id="hiddenDestinations">
+                <button type="submit" class="inquiry-submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send Inquiry
+                </button>
+                <div class="booking-note">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>All bookings are handled manually by our team.</strong> We typically respond within 24-48 hours with a personalized quote and itinerary. For urgent requests, WhatsApp us at <a href="https://wa.me/254722419414" style="color:var(--sunset-gold)">+254 722 419414</a>.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- BROWSE PACKAGES -->
+    <div class="destination-selector" id="browseSection" style="display:none;">
+        <div class="mode-back">
+            <span class="mode-tag"><i class="fas fa-map"></i> Browse Packages</span>
+        </div>
+        <div class="destinations-grid" id="browseGrid">
+            <div class="package-card" data-destination="Classic Mara Explorer">
+                <img src="cme.png" alt="Classic Mara Explorer" loading="lazy">
+                <div class="package-overlay"></div>
+                <div class="package-content">
+                    <span class="package-tag">Most Popular</span>
+                    <h3>Classic Mara Explorer</h3>
+                    <p>3 days of pure Big Five action in Kenya's most famous reserve. Includes 2 nights at a mid-range tented camp with full board.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-clock"></i> 3 Days / 2 Nights</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Maasai Mara</span>
+                    </div>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+            <div class="package-card" data-destination="Amboseli & Mara Combo">
+                <img src="am.png" alt="Amboseli & Mara Combo" loading="lazy">
+                <div class="package-overlay"></div>
+                <div class="package-content">
+                    <span class="package-tag">Best Value</span>
+                    <h3>Amboseli & Mara Combo</h3>
+                    <p>5 days combining Kilimanjaro's elephant herds with the Mara's big cats. Fly between parks for maximum game time.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-clock"></i> 5 Days / 4 Nights</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Amboseli + Mara</span>
+                    </div>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+            <div class="package-card" data-destination="Northern Frontier Adventure">
+                <img src="nf.png" alt="Northern Frontier Adventure" loading="lazy">
+                <div class="package-overlay"></div>
+                <div class="package-content">
+                    <span class="package-tag">Exclusive</span>
+                    <h3>Northern Frontier Adventure</h3>
+                    <p>4 days in Samburu and Ol Pejeta. Spot the Special Five, visit the last northern white rhinos, and sleep under the stars.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-clock"></i> 4 Days / 3 Nights</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Samburu + Ol Pejeta</span>
+                    </div>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+            <div class="package-card" data-destination="Tsavo Red Elephant Trail">
+                <img src="tsavo.jpg" alt="Tsavo Red Elephant Trail" loading="lazy">
+                <div class="package-overlay"></div>
+                <div class="package-content">
+                    <span class="package-tag">Adventure</span>
+                    <h3>Tsavo Red Elephant Trail</h3>
+                    <p>3 days exploring Kenya's largest park. Track red-dust elephants, visit the lava flows, and stay at a historic lodge.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-clock"></i> 3 Days / 2 Nights</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Tsavo East & West</span>
+                    </div>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+            <div class="package-card" data-destination="Bush & Beach Escape">
+                <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&q=80" alt="Bush & Beach Escape" loading="lazy">
+                <div class="package-overlay"></div>
+                <div class="package-content">
+                    <span class="package-tag">Honeymoon</span>
+                    <h3>Bush & Beach Escape</h3>
+                    <p>7 days — 4 days in the Mara followed by 3 days on Diani's white sands. The perfect blend of wildlife and relaxation.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-clock"></i> 7 Days / 6 Nights</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Mara + Diani</span>
+                    </div>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+            <div class="package-card" data-destination="Rift Valley Discovery">
+                <img src="lnl.png" alt="Rift Valley Discovery" loading="lazy">
+                <div class="package-overlay"></div>
+                <div class="package-content">
+                    <span class="package-tag">Photography</span>
+                    <h3>Rift Valley Discovery</h3>
+                    <p>3 days through Lake Nakuru's flamingos and Hell's Gate's dramatic gorges. Cycle among wildlife and soak in hot springs.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-clock"></i> 3 Days / 2 Nights</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Nakuru + Hell's Gate</span>
+                    </div>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+            <div class="package-card" data-destination="Mount Kenya Summit Trek">
+                <img src="mtkenya.jpg" alt="Mount Kenya Summit Trek" loading="lazy">
+                <div class="package-overlay"></div>
+                <div class="package-content">
+                    <span class="package-tag">Trekking</span>
+                    <h3>Mount Kenya Summit Trek</h3>
+                    <p>5 days climbing Africa's second highest peak via the scenic Chogoria route. Includes all camping gear and porters.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-clock"></i> 5 Days / 4 Nights</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Mount Kenya</span>
+                    </div>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+            <div class="package-card" data-destination="Lamu Swahili Heritage">
+                <img src="lsh.png" alt="Lamu Swahili Heritage" loading="lazy">
+                <div class="package-overlay"></div>
+                <div class="package-content">
+                    <span class="package-tag">Culture</span>
+                    <h3>Lamu Swahili Heritage</h3>
+                    <p>4 days on the UNESCO-listed island. Dhow sailing, ancient stone town walks, and fresh seafood on the waterfront.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-clock"></i> 4 Days / 3 Nights</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Lamu Island</span>
+                    </div>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+            <div class="package-card" data-destination="Grand Kenya Circuit">
+                <img src="bok.png" alt="Grand Kenya Circuit" loading="lazy">
+                <div class="package-overlay"></div>
+                <div class="package-content">
+                    <span class="package-tag">Ultimate</span>
+                    <h3>Best of Kenya</h3>
+                    <p>10 days covering Aberdare, Samburu, Amboseli, Ol Pejeta, Nakuru, and the Mara. The complete Kenyan safari experience.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-clock"></i> 10 Days / 9 Nights</span>
+                        <span><i class="fas fa-map-marker-alt"></i> 5 Destinations</span>
+                    </div>
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="no-selection-msg" id="noPackageMsg">
+            <i class="fas fa-hand-pointer"></i>
+            Click on a package above to select your safari
+        </div>
+        <div class="inquiry-form-container" id="packageFormContainer">
+            <h3>Book Your Package</h3>
+            <p class="selected-destinations" id="selectedPackage"></p>
+            <form class="inquiry-form" id="packageInquiryForm" action="https://formsubmit.co/info@mylandtours.co.ke" method="POST">
+                <input type="hidden" name="_subject" value="New Package Booking - My Land Tours">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="thank-you.html">
+                <input type="hidden" name="bookingType" value="Package Booking">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" name="firstName" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" name="lastName" placeholder="Doe" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone / WhatsApp</label>
+                    <input type="tel" name="phone" placeholder="+254 700 000000">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Travel Dates</label>
+                        <input type="date" name="travelDate">
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Travelers</label>
+                        <select name="travelers">
+                            <option>1 Person</option>
+                            <option>2 People</option>
+                            <option>3-4 People</option>
+                            <option>5+ People</option>
+                            <option>Group / Corporate</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Vehicle</label>
+                    <select name="vehicle" required>
+                        <option value="">Select a vehicle...</option>
+                        <option value="Toyota Land Cruiser (4x4 Safari Jeep)">Toyota Land Cruiser — 4x4 Safari Jeep (6-7 pax)</option>
+                        <option value="Toyota Hiace Safari Van">Toyota Hiace Safari Van (8-9 pax)</option>
+                        <option value="Toyota Coaster Bus">Toyota Coaster Bus — Group Transport (25 pax)</option>
+                        <option value="Not Sure / Recommend">Not Sure — Recommend Best Option</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Budget Preference</label>
+                    <select name="budget">
+                        <option>Budget / Explorer</option>
+                        <option>Mid-Range / Discovery</option>
+                        <option>Luxury</option>
+                        <option>Not Sure Yet</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Additional Details</label>
+                    <textarea name="message" placeholder="Any special requests, dietary needs, celebration plans, or questions about the package..."></textarea>
+                </div>
+                <input type="hidden" name="selectedPackage" id="hiddenPackage">
+                <button type="submit" class="inquiry-submit-btn">
+                    <i class="fas fa-paper-plane"></i> Book This Package
+                </button>
+                <div class="booking-note">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>All bookings are handled manually by our team.</strong> We typically respond within 24-48 hours with a personalized quote and itinerary. For urgent requests, WhatsApp us at <a href="https://wa.me/254722419414" style="color:var(--sunset-gold)">+254 722 419414</a>.
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!-- Experiences Section -->
+    <section id="experiences" class="experiences-section">
+        <div class="section-header reveal">
+            <div class="section-label">Adventures</div>
+            <h2>Unforgettable Experiences</h2>
+            <p>Beyond the game drive — immerse yourself in the magic of East Africa.</p>
+        </div>
+        <div class="experiences-grid">
+            <div class="experience-item reveal">
+                <i class="fas fa-fire"></i>
+                <h4>Hot Air Balloon</h4>
+                <p>Soar over the Mara at sunrise for a bird's-eye view of the wilderness below.</p>
+            </div>
+            <div class="experience-item reveal">
+                <i class="fas fa-users"></i>
+                <h4>Maasai Culture</h4>
+                <p>Visit authentic Maasai villages and learn about ancient traditions and way of life.</p>
+            </div>
+            <div class="experience-item reveal">
+                <i class="fas fa-camera"></i>
+                <h4>Photo Safaris</h4>
+                <p>Guided photography tours with professional wildlife photographers and top equipment.</p>
+            </div>
+            <div class="experience-item reveal">
+                <i class="fas fa-hiking"></i>
+                <h4>Walking Safaris</h4>
+                <p>Track wildlife on foot with armed rangers for an intimate bush experience.</p>
+            </div>
+            <div class="experience-item reveal">
+                <i class="fas fa-horse"></i>
+                <h4>Horseback Riding</h4>
+                <p>Gallop alongside zebras and giraffes on horseback across the open plains.</p>
+            </div>
+            <div class="experience-item reveal">
+                <i class="fas fa-umbrella-beach"></i>
+                <h4>Bush & Beach</h4>
+                <p>Combine thrilling safaris with relaxing coastal getaways on Diani's white sands.</p>
+            </div>
+            <div class="experience-item reveal">
+                <i class="fas fa-binoculars"></i>
+                <h4>Bird Watching</h4>
+                <p>Discover over 1,100 bird species across Kenya's diverse ecosystems and wetlands.</p>
+            </div>
+            <div class="experience-item reveal">
+                <i class="fas fa-mountain"></i>
+                <h4>Mountain Trekking</h4>
+                <p>Climb Mount Kenya or explore the Aberdare ranges with expert mountain guides.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="section-header reveal">
+            <div class="section-label">Stories</div>
+            <h2>What Travelers Say</h2>
+            <p>Real experiences from adventurers who explored with us.</p>
+        </div>
+        <div class="testimonials-container reveal">
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">My Land Tours crafted the most incredible safari experience for our family. Seeing the Great Migration up close was a dream come true. Our guide knew exactly where to find the big cats!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <p>London, UK</p>
+                            <div class="stars-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">We booked the Discovery package and it exceeded every expectation. The Land Cruiser was spotless, the lodges were stunning, and our guide James had an encyclopedic knowledge of every animal we saw.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <h4>Michael & Karen</h4>
+                            <p>Toronto, Canada</p>
+                            <div class="stars-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">As a solo traveler, I felt completely safe and looked after. The team arranged everything perfectly — from airport pickup to my final beach days in Diani. Cannot recommend them enough!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EJ</div>
+                        <div class="author-info">
+                            <h4>Elena Johnson</h4>
+                            <p>Sydney, Australia</p>
+                            <div class="stars-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Our honeymoon was absolutely magical. The team surprised us with a private bush dinner under the stars at Amboseli. The attention to detail made this trip unforgettable.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DW</div>
+                        <div class="author-info">
+                            <h4>David & Wangari</h4>
+                            <p>Nairobi, Kenya</p>
+                            <div class="stars-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">We brought our school group of 22 students for an educational safari. The coaster bus was comfortable, the guide was engaging with the kids, and the itinerary was perfectly paced.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RP</div>
+                        <div class="author-info">
+                            <h4>Robert Peters</h4>
+                            <p>Teacher, International School</p>
+                            <div class="stars-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The walking safari in Samburu was the highlight of my year. Being on foot in the wilderness, tracking elephants with a Maasai guide — nothing compares to that raw connection with nature.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JL</div>
+                        <div class="author-info">
+                            <h4>James Lindberg</h4>
+                            <p>Stockholm, Sweden</p>
+                            <div class="stars-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header reveal">
+            <div class="section-label">Get in Touch</div>
+            <h2>Start Your Journey</h2>
+            <p>Tell us your dream safari and we will make it reality. No obligation, just expert advice.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3>Let's Plan Your Adventure</h3>
+                <p>Our safari experts are ready to design a personalized itinerary that matches your travel style, budget, and bucket list. Reach out today and receive a free custom quote within 24 hours.</p>
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Office</h4>
+                        <p>My Land Tours & Travel<br>Nairobi, Kenya</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+254757269980">+254 757 269980</a><br>Mon - Sat, 8am - 6pm EAT</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/254722419414" target="_blank">+254 722 419414</a><br>Instant messaging available</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@mylandtours.co.ke">info@mylandtours.co.ke</a><br><a href="mailto:bookings@mylandtours.co.ke">bookings@mylandtours.co.ke</a></p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Response Time</h4>
+                        <p>Within 24 hours<br>WhatsApp available 24/7</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form reveal">
+                <form id="bookingForm" action="https://formsubmit.co/info@mylandtours.co.ke" method="POST">
+                    <input type="hidden" name="_subject" value="New Booking Inquiry - My Land Tours">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" name="firstName" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" name="lastName" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone / WhatsApp</label>
+                        <input type="tel" name="phone" placeholder="+1 234 567 890">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Travel Dates</label>
+                            <input type="date" name="travelDate">
+                        </div>
+                        <div class="form-group">
+                            <label>Travelers</label>
+                            <select name="travelers">
+                                <option>1 Person</option>
+                                <option>2 People</option>
+                                <option>3-4 People</option>
+                                <option>5+ People</option>
+                                <option>Group / Corporate</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Vehicle</label>
+                        <select name="vehicle" required>
+                            <option value="">Select a vehicle...</option>
+                            <option value="Toyota Land Cruiser">Toyota Land Cruiser — 4x4 Safari Jeep (6-7 pax)</option>
+                            <option value="Toyota Hiace Safari Van">Toyota Hiace Safari Van (8-9 pax)</option>
+                            <option value="Toyota Coaster Bus">Toyota Coaster Bus — Group Transport (25 pax)</option>
+                            <option value="Recommend">Not Sure — Recommend Best Option</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Days</label>
+                        <select name="days" required>
+                            <option value="">How many days?</option>
+                            <option value="1 Day">1 Day</option>
+                            <option value="2 Days">2 Days</option>
+                            <option value="3 Days">3 Days</option>
+                            <option value="4 Days">4 Days</option>
+                            <option value="5 Days">5 Days</option>
+                            <option value="6 Days">6 Days</option>
+                            <option value="7 Days">7 Days</option>
+                            <option value="7+ Days">7+ Days</option>
+                            <option value="Not Sure">Not Sure Yet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Package</label>
+                        <select name="package">
+                            <option>Explorer (Budget)</option>
+                            <option>Discovery (Mid-Range)</option>
+                            <option>Luxury</option>
+                            <option>Custom / Not Sure</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Message</label>
+                        <textarea name="message" placeholder="Tell us about your dream safari, preferred destinations, special requests..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Inquiry
+                    </button>
+                    <div class="booking-note">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>All bookings are handled manually by our team.</strong> We typically respond within 24-48 hours with a personalized quote and itinerary. For urgent requests, WhatsApp us at <a href="https://wa.me/254722419414" style="color:var(--sunset-gold)">+254 722 419414</a>.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                   <div class="logo-icon">
+                     <img src="your-logo.png" alt="My Land Tours and Travel" style="width:100%;height:100%;object-fit:cover;">
+                   </div>
+                    <div class="logo-text">My Land <span>Tours and Travel</span></div>
+                </a>
+                <p>Premier safari and travel experiences in Kenya and East Africa. Crafting unforgettable journeys since 2009. Your adventure, our passion.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=100054323976669" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/myland_tours" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/mylandtours" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/mylandtours" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/254722419414" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Destinations</h4>
+                <ul>
+                    <li><a href="index.html#destinations">Maasai Mara</a></li>
+                    <li><a href="index.html#destinations">Amboseli</a></li>
+                    <li><a href="index.html#destinations">Lake Nakuru</a></li>
+                    <li><a href="index.html#destinations">Samburu</a></li>
+                    <li><a href="index.html#destinations">Tsavo</a></li>
+                    <li><a href="index.html#destinations">Diani Beach</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="index.html#packages">Safari Packages</a></li>
+                    <li><a href="index.html#packages">Hotel Bookings</a></li>
+                    <li><a href="index.html#packages">Airport Transfers</a></li>
+                    <li><a href="index.html#vehicles">Van & Bus Hire</a></li>
+                    <li><a href="index.html#packages">Group Tours</a></li>
+                    <li><a href="index.html#packages">Honeymoon Packages</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html#mission">Mission</a></li>
+                    <li><a href="about.html#vision">Vision</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a onclick="openLegalModal('privacy')">Privacy Policy</a></li>
+                    <li><a onclick="openLegalModal('terms')">Terms of Service</a></li>
+                    <li><a onclick="openLegalModal('cancellation')">Cancellation Policy</a></li>
+                    <li><a onclick="openLegalModal('insurance')">Travel Insurance</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><span id="year"></span> © My Land Tours & Travel. All rights reserved. | KATO Member | Licensed Tour Operator</p>
+            <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        </div>
+    </footer>
+
+    <!-- LEGAL MODAL -->
+    <div class="legal-modal-overlay" id="legalModalOverlay" onclick="closeLegalModal(event)">
+        <div class="legal-modal" onclick="event.stopPropagation()">
+            <div class="legal-modal-header">
+                <h3 id="legalModalTitle">Legal Information</h3>
+                <button class="legal-modal-close" onclick="closeLegalModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="legal-tabs">
+                <button class="legal-tab active" onclick="switchLegalTab('privacy')">Privacy Policy</button>
+                <button class="legal-tab" onclick="switchLegalTab('terms')">Terms of Service</button>
+                <button class="legal-tab" onclick="switchLegalTab('cancellation')">Cancellation Policy</button>
+                <button class="legal-tab" onclick="switchLegalTab('insurance')">Travel Insurance</button>
+            </div>
+            <div class="legal-modal-body" id="legalModalBody">
+                <!-- Privacy Policy -->
+                <div class="legal-content active" id="privacy-content">
+                    <h4>1. Information We Collect</h4>
+                    <p>We collect personal information that you voluntarily provide when booking a safari, filling out our contact forms, or communicating with us. This includes your name, email address, phone number, passport details (for park permits), travel preferences, dietary requirements, and emergency contact information.</p>
+                    <h4>2. How We Use Your Information</h4>
+                    <p>Your information is used exclusively to: process and confirm your safari booking; communicate with you about your itinerary; arrange accommodations, park permits, and transportation; provide customer support; and send you travel updates and offers (only with your consent).</p>
+                    <h4>3. Information Sharing</h4>
+                    <p>We do not sell your personal data. We only share information with trusted partners necessary to fulfill your safari: accommodation providers, national park authorities (for entry permits), transportation providers, and travel insurance companies (if requested). All partners are bound by confidentiality agreements.</p>
+                    <h4>4. Data Security</h4>
+                    <p>We implement industry-standard security measures including SSL encryption for all data transmission, secure server storage, access controls, and regular security audits. Your payment information is processed through PCI-compliant payment gateways — we never store your credit card details.</p>
+                    <h4>5. Data Retention</h4>
+                    <p>We retain your personal data for 7 years after your safari completion to comply with Kenyan tax and tourism regulations. You may request deletion of your data at any time by emailing <a href="mailto:info@mylandtours.co.ke" style="color:var(--sunset-gold)">info@mylandtours.co.ke</a>.</p>
+                    <h4>6. Your Rights</h4>
+                    <p>Under the Kenyan Data Protection Act 2019, you have the right to: access your personal data; request correction of inaccurate data; request deletion of your data; object to processing; and lodge a complaint with the Office of the Data Protection Commissioner.</p>
+                    <h4>7. Cookies</h4>
+                    <p>Our website uses essential cookies for functionality and analytics cookies to improve user experience. You can control cookie preferences through your browser settings.</p>
+                    <h4>8. Contact</h4>
+                    <p>For privacy-related inquiries, contact our Data Protection Officer at <a href="mailto:info@mylandtours.co.ke" style="color:var(--sunset-gold)">info@mylandtours.co.ke</a> or call +254 757 269980.</p>
+                </div>
+                <!-- Terms of Service -->
+                <div class="legal-content" id="terms-content">
+                    <h4>1. Acceptance of Terms</h4>
+                    <p>By accessing our website and booking our services, you agree to these Terms of Service. If you do not agree, please do not use our services. These terms are governed by the laws of the Republic of Kenya.</p>
+                    <h4>2. Booking & Payments</h4>
+                    <p>A 30% non-refundable deposit is required to confirm all bookings. Full payment is due 60 days before departure. For bookings made within 60 days of travel, full payment is required at the time of booking. We accept bank transfer, M-Pesa, and major credit cards.</p>
+                    <h4>3. Safari Participation Requirements</h4>
+                    <p>All travelers must have: a valid passport with at least 6 months validity; appropriate visas (we can assist with eTA applications); comprehensive travel insurance; and required vaccinations (Yellow Fever certificate mandatory for entry from endemic countries).</p>
+                    <h4>4. Health & Safety</h4>
+                    <p>Wildlife safaris involve inherent risks. You must follow all safety instructions provided by your guide. My Land Tours is not liable for injuries resulting from failure to follow guide instructions, wildlife encounters, or personal negligence. We strongly recommend malaria prophylaxis for all safari destinations.</p>
+                    <h4>5. Itinerary Changes</h4>
+                    <p>While we make every effort to adhere to published itineraries, we reserve the right to make modifications due to: weather conditions; park closures; vehicle breakdowns; or circumstances beyond our control. Significant changes will be communicated promptly with alternative arrangements offered.</p>
+                    <h4>6. Liability Limitation</h4>
+                    <p>My Land Tours and Travel's liability is limited to the total amount paid for the safari package. We are not liable for: acts of God; political unrest; airline delays/cancellations; or losses caused by third-party service providers. We strongly recommend comprehensive travel insurance covering trip cancellation, medical emergencies, and evacuation.</p>
+                    <h4>7. Intellectual Property</h4>
+                    <p>All content on this website including text, images, logos, and design is the property of My Land Tours & Travel. With a number of stock free images, unauthorized use, reproduction, or distribution is prohibited.</p>
+                    <h4>8. Governing Law</h4>
+                    <p>These terms are governed by the laws of Kenya. Any disputes shall be resolved through mediation or arbitration in Nairobi, Kenya.</p>
+                </div>
+                <!-- Cancellation Policy -->
+                <div class="legal-content" id="cancellation-content">
+                    <h4>1. Cancellation by You</h4>
+                    <p>All cancellations must be submitted in writing via email to <a href="mailto:bookings@mylandtours.co.ke" style="color:var(--sunset-gold)">bookings@mylandtours.co.ke</a>. Cancellation fees are calculated from the date we receive your written notice:</p>
+                    <ul>
+                        <li><strong>90+ days before departure:</strong> Loss of deposit (30% of total)</li>
+                        <li><strong>60-89 days before departure:</strong> 50% of total trip cost</li>
+                        <li><strong>30-59 days before departure:</strong> 75% of total trip cost</li>
+                        <li><strong>Less than 30 days:</strong> 100% of total trip cost — no refund</li>
+                    </ul>
+                    <h4>2. Cancellation by Us</h4>
+                    <p>In the unlikely event that we must cancel your safari due to circumstances beyond our control (natural disasters, government restrictions, park closures), you will receive a full refund or the option to reschedule at no additional cost.</p>
+                    <h4>3. No-Shows</h4>
+                    <p>Failure to arrive for your safari without prior written notice will be treated as a cancellation less than 30 days — no refund will be issued.</p>
+                    <h4>4. Trip Interruption</h4>
+                    <p>If you choose to leave a safari early for any reason, no refund will be issued for unused portions. We strongly recommend travel insurance with trip interruption coverage.</p>
+                    <h4>5. Date Changes</h4>
+                    <p>Date changes requested more than 60 days before departure may be accommodated subject to availability and a $100 administration fee per person. Changes within 60 days are treated as cancellations.</p>
+                    <h4>6. Force Majeure</h4>
+                    <p>Neither party shall be liable for failure to perform due to causes beyond reasonable control including: natural disasters, war, terrorism, civil unrest, epidemic/pandemic, government actions, or strikes.</p>
+                </div>
+                <!-- Travel Insurance -->
+                <div class="legal-content" id="insurance-content">
+                    <h4>1. Insurance</h4>
+                    <p>Comprehensive travel insurance isn't <strong>mandatory</strong> for all My Land Tours and Travel safaris. Though we strongly recommend that all travelers to have a comprehensive policy. You must provide proof of insurance before departure on Mount Kenya climbs, Adventure Tours, Some international trips, Specific partner requirements or when a traveller has any pre-existing conditions that necessitate coverage. Without valid insurance, we reserve the right to cancel your booking with standard cancellation fees applying.</p>
+                    <h4>2. Coverage</h4>
+                    <p>Your travel insurance should include at minimum if insured:</p>
+                    <ul>
+                        <li><strong>Emergency Medical:</strong> Coverage sufficient for hospitalization, emergency treatment, and medical emergencies during travel.</li>
+                        <li><strong>Medical Evacuation:</strong> Coverage for emergency evacuation and transportation from remote destinations to appropriate medical facilities in case of emergencies.</li>
+                        <li><strong>Trip Cancellation:</strong> 100% of prepaid non-refundable costs</li>
+                        <li><strong>Trip Interruption:</strong> 100% of remaining trip value</li>
+                        <li><strong>Baggage & Personal Effects:</strong> Adequate coverage for cameras, binoculars, etc.</li>
+                        <li><strong>24-Hour Emergency Assistance:</strong> With reverse charge call capability</li>
+                    </ul>
+                    <h4>3. Safari-Specific Coverage</h4>
+                    <p>Standard travel insurance often excludes safari activities. Ensure your policy explicitly covers: wildlife viewing from open vehicles; walking safaris and bush walks; hot air balloon rides; and activities above 4,000m (Mount Kenya treks).</p>
+                    <h4>4. Medical Considerations for Kenya</h4>
+                    <p>While Kenya offers excellent private medical facilities in major cities, travelers visiting remote safari destinations should ensure their insurance includes emergency medical evacuation coverage. Quality private hospitals exist in major cities but evacuation from remote parks is expensive. Malaria is present in most safari areas — take prophylaxis and use mosquito repellent. Drink only bottled or purified water provided by your tour operator.</p>
+                    <h4>5. Recommended Insurance Providers</h4>
+                    <p>While we don't endorse specific providers, our clients have had positive experiences with: World Nomads; SafetyWing; Allianz Global Assistance; and IMG Global. For Kenyan residents, APA Insurance and Jubilee Insurance offer suitable local coverage and Amref in general.</p>
+                    <h4>6. Pre-Existing Conditions</h4>
+                    <p>Declare all pre-existing medical conditions when purchasing insurance. Failure to disclose may void your coverage. Many insurers offer waivers if you purchase within 14-21 days of your initial trip deposit.</p>
+                    <h4>7. Claims Assistance</h4>
+                    <p>In the event of a claim, we will provide all necessary documentation including: trip invoices; medical reports; police reports (if applicable); and witness statements. Contact us immediately if you need assistance with a claim.</p>
+                    <h4>8. Emergency Assistance During Your Trip</h4>
+                    <p>If you experience a medical emergency, accident, loss of travel documents, or any situation requiring immediate assistance, contact your insurance provider's emergency hotline first and notify the company guide or driver assigned to your trip as soon as possible. Our team will assist in coordinating local support where possible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== LOADING SCREEN ===== 
+var playerReady = false;
+var loaderHidden = false;
+
+function hideLoader() {
+    if (!loaderHidden) {
+        loaderHidden = true;
+        document.getElementById('loader').classList.add('hidden');
+    }
+}
+
+window.addEventListener('load', () => {
+    // Minimum loader time: 1.5 seconds
+    setTimeout(() => {
+        if (playerReady) {
+            hideLoader();
+        }
+    }, 1500);
+    
+    // Maximum loader time: 6 seconds (fallback)
+    setTimeout(hideLoader, 6000);
+});
+
+        // ===== STAR FIELD =====
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.setProperty('--duration', (Math.random() * 3 + 2) + 's');
+            star.style.setProperty('--opacity', Math.random() * 0.8 + 0.2);
+            star.style.animationDelay = Math.random() * 5 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // ===== CUSTOM CURSOR =====
+        const cursor = document.getElementById('cursor');
+        const cursorFollower = document.getElementById('cursorFollower');
+        if (window.matchMedia('(pointer: fine)').matches) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX - 10 + 'px';
+                cursor.style.top = e.clientY - 10 + 'px';
+                cursorFollower.style.left = e.clientX - 4 + 'px';
+                cursorFollower.style.top = e.clientY - 4 + 'px';
+            });
+        }
+            document.querySelectorAll('a, button, .destination-card, .selector-card, .experience-item').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(1.5)';
+                    cursor.style.borderColor = 'var(--sunset-yellow)';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursor.style.borderColor = 'var(--sunset-gold)';
+                });
+            });
+
+        // ===== NAVBAR SCROLL =====
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ===== SCROLL REVEAL =====
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 100);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== COUNTER ANIMATION =====
+        const counters = document.querySelectorAll('.stat-number');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    const duration = 2000;
+                    const step = target / (duration / 16);
+                    let current = 0;
+                    const updateCounter = () => {
+                        current += step;
+                        if (current < target) {
+                            entry.target.textContent = Math.floor(current) + '+';
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            entry.target.textContent = target + '+';
+                        }
+                    };
+                    updateCounter();
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        // ===== 3D CARD TILT =====
+        document.querySelectorAll('.destination-card, .experience-item').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+            });
+        });
+
+        // ===== MOBILE MENU =====
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        mobileMenuBtn.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.background = 'var(--glass)';
+                navLinks.style.backdropFilter = 'blur(20px)';
+                navLinks.style.padding = '2rem';
+                navLinks.style.gap = '1.5rem';
+                navLinks.style.borderBottom = '1px solid var(--glass-border)';
+            }
+        });
+
+        // ===== VEHICLE CAROUSEL =====
+        let currentSlide = 0;
+        const slides = document.getElementById('vehicleSlides');
+        const dots = document.querySelectorAll('.vehicle-dot');
+        const totalSlides = 3;
+        function goToSlide(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            currentSlide = index;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+        document.getElementById('nextVehicle').addEventListener('click', () => goToSlide(currentSlide + 1));
+        document.getElementById('prevVehicle').addEventListener('click', () => goToSlide(currentSlide - 1));
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToSlide(index));
+        });
+        setInterval(() => goToSlide(currentSlide + 1), 6000);
+
+        // ===== VEHICLE IMAGE ZOOM =====
+        function setupZoom(containerId, imageId) {
+            const container = document.getElementById(containerId);
+            const image = document.getElementById(imageId);
+            if (!container || !image) return;
+            container.addEventListener('mousemove', (e) => {
+                const rect = container.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                image.style.transformOrigin = `${x}% ${y}%`;
+                image.style.transform = 'scale(1.5)';
+            });
+            container.addEventListener('mouseleave', () => {
+                image.style.transform = 'scale(1)';
+                image.style.transformOrigin = 'center center';
+            });
+        }
+        setupZoom('cruiserImg', 'cruiserImage');
+        setupZoom('vanImg', 'vanImage');
+        setupZoom('busImg', 'busImage');
+
+    // ===== MODE SELECTOR =====
+    let currentMode = null;
+    let selectedDestinations = [];
+    let selectedPackage = null;
+
+    function selectMode(mode) {
+        // If clicking the already active mode, do nothing
+        if (currentMode === mode) return;
+
+        currentMode = mode;
+
+        // Update mode card visuals
+        document.getElementById('modeBuild').classList.toggle('active', mode === 'build');
+        document.getElementById('modeBrowse').classList.toggle('active', mode === 'browse');
+
+        // Show/hide sections
+        if (mode === 'build') {
+            document.getElementById('buildSection').style.display = 'block';
+            document.getElementById('browseSection').style.display = 'none';
+            document.getElementById('bookingType').value = 'Build Your Own Safari';
+
+            // Clear any package selection
+            clearPackageSelection();
+        } else if (mode === 'browse') {
+            document.getElementById('buildSection').style.display = 'none';
+            document.getElementById('browseSection').style.display = 'block';
+
+            // Clear any build selections
+            clearBuildSelection();
+        }
+
+        // Scroll to content
+        document.getElementById('packages').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function clearBuildSelection() {
+        selectedDestinations = [];
+        document.querySelectorAll('#buildGrid .selector-card').forEach(c => c.classList.remove('selected'));
+        document.getElementById('noSelectionMsg').style.display = 'block';
+        document.getElementById('inquiryFormContainer').classList.remove('active');
+        document.getElementById('selectedDestinations').textContent = '';
+        document.getElementById('hiddenDestinations').value = '';
+    }
+
+    function clearPackageSelection() {
+        selectedPackage = null;
+        document.querySelectorAll('#browseGrid .package-card').forEach(c => c.classList.remove('selected'));
+        document.getElementById('noPackageMsg').style.display = 'block';
+        document.getElementById('packageFormContainer').classList.remove('active');
+        document.getElementById('selectedPackage').textContent = '';
+        document.getElementById('hiddenPackage').value = '';
+    }
+
+    // ===== BUILD YOUR OWN SAFARI =====
+    function initBuildCards() {
+        const buildCards = document.querySelectorAll('#buildGrid .selector-card');
+        const inquiryFormContainer = document.getElementById('inquiryFormContainer');
+        const noSelectionMsg = document.getElementById('noSelectionMsg');
+        const selectedDestinationsDisplay = document.getElementById('selectedDestinations');
+        const hiddenDestinations = document.getElementById('hiddenDestinations');
+
+        buildCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const dest = card.getAttribute('data-destination');
+                if (card.classList.contains('selected')) {
+                    card.classList.remove('selected');
+                    selectedDestinations = selectedDestinations.filter(d => d !== dest);
+                } else {
+                    card.classList.add('selected');
+                    selectedDestinations.push(dest);
+                }
+                if (selectedDestinations.length > 0) {
+                    noSelectionMsg.style.display = 'none';
+                    inquiryFormContainer.classList.add('active');
+                    selectedDestinationsDisplay.textContent = 'Selected Destinations: ' + selectedDestinations.join(', ');
+                    hiddenDestinations.value = selectedDestinations.join(', ');
+                } else {
+                    noSelectionMsg.style.display = 'block';
+                    inquiryFormContainer.classList.remove('active');
+                    selectedDestinationsDisplay.textContent = '';
+                    hiddenDestinations.value = '';
+                }
+            });
+        });
+    }
+
+    // ===== BROWSE PACKAGES =====
+    function initBrowseCards() {
+        const packageCards = document.querySelectorAll('#browseGrid .package-card');
+        const packageFormContainer = document.getElementById('packageFormContainer');
+        const noPackageMsg = document.getElementById('noPackageMsg');
+        const selectedPackageDisplay = document.getElementById('selectedPackage');
+        const hiddenPackage = document.getElementById('hiddenPackage');
+
+        packageCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const pkg = card.getAttribute('data-destination');
+
+                // Deselect all other cards (single-select)
+                packageCards.forEach(c => c.classList.remove('selected'));
+
+                if (selectedPackage === pkg) {
+                    selectedPackage = null;
+                    noPackageMsg.style.display = 'block';
+                    packageFormContainer.classList.remove('active');
+                    selectedPackageDisplay.textContent = '';
+                    hiddenPackage.value = '';
+                } else {
+                    card.classList.add('selected');
+                    selectedPackage = pkg;
+                    noPackageMsg.style.display = 'none';
+                    packageFormContainer.classList.add('active');
+                    selectedPackageDisplay.textContent = 'Selected Package: ' + pkg;
+                    hiddenPackage.value = pkg;
+                }
+            });
+        });
+    }
+
+    // Initialize both on page load
+    initBuildCards();
+    initBrowseCards()
+
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ===== LEGAL MODAL =====
+        function openLegalModal(tab) {
+            document.getElementById('legalModalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            switchLegalTab(tab);
+        }
+        function closeLegalModal(event) {
+            if (!event || event.target === document.getElementById('legalModalOverlay')) {
+                document.getElementById('legalModalOverlay').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        function switchLegalTab(tab) {
+            document.querySelectorAll('.legal-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.legal-content').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.legal-tab[onclick="switchLegalTab('${tab}')"]`).classList.add('active');
+            document.getElementById(tab + '-content').classList.add('active');
+            const titles = {
+                'privacy': 'Privacy Policy',
+                'terms': 'Terms of Service',
+                'cancellation': 'Cancellation Policy',
+                'insurance': 'Travel Insurance'
+            };
+            document.getElementById('legalModalTitle').textContent = titles[tab];
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLegalModal();
+        });
+    </script> 
+</body>
+</html>

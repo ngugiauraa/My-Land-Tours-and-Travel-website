@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | My Land Tours & Travel</title>
+    <meta name="robots" content="noindex">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1A0F0A;
+            color: #F5E6D3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+        }
+        .container { max-width: 500px; }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #E8A838;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        p { color: #8B7355; font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.5rem; }
+        .whatsapp { color: #E8A838; font-weight: 600; }
+        a {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #E8A838, #D4762C);
+            color: #1A0F0A;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        a:hover { transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You!</h1>
+        <p>Your safari inquiry has been received.</p>
+        <p>Our team will get back to you within <strong>24-48 hours</strong> with a personalized quote and itinerary.</p>
+        <p>For urgent requests, WhatsApp us at <span class="whatsapp">+254 722 419414</span>.</p>
+        <a href="index.html">Back to Home</a>
+    </div>
+<!-- AUDIO RESUME: No overlay, just resume from saved time -->
+<div id="audio-player" style="position: fixed; bottom: 12px; right: 12px; z-index: 9999; background: rgba(44,24,16,0.92); border: 1px solid rgba(232,168,56,0.3); border-radius: 24px; padding: 6px 12px; display: none; align-items: center; gap: 8px; backdrop-filter: blur(10px);">
+    <span style="color: #E8A838; font-size: 11px; font-family: 'Inter', sans-serif; font-weight: 500;">🎵 My Land is Kenya</span>
+    <button id="audio-toggle" style="background: #E8A838; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer; color: #2C1810; font-size: 12px; display: flex; align-items: center; justify-content: center;">▶</button>
+    <input type="range" id="audio-volume" min="0" max="100" value="30" style="width: 50px; accent-color: #E8A838;">
+</div>
+
+<div style="position: fixed; bottom: 80px; right: 20px; width: 2px; height: 2px; z-index: 9998; overflow: hidden; opacity: 0.01;">
+    <iframe id="yt-player" src="https://www.youtube.com/embed/gUKe7Q0N0-4?enablejsapi=1&autoplay=0&mute=0&controls=0&loop=1&playlist=gUKe7Q0N0-4" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+</div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+var player;
+var isPlaying = false;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('yt-player', {
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+function onPlayerReady(event) {
+    var savedTime = localStorage.getItem('audioTime');
+    var wasPlaying = localStorage.getItem('audioPlaying');
+    
+    if (savedTime) {
+        player.seekTo(parseFloat(savedTime), true);
+    }
+    
+    player.setVolume(50);
+    
+    // Only show player if user had music on before
+    if (wasPlaying === 'true') {
+        document.getElementById('audio-player').style.display = 'flex';
+        
+        // Wait for user interaction to unmute and play
+        function resumeAudio() {
+            player.unMute();
+            player.playVideo();
+            document.removeEventListener('click', resumeAudio);
+            document.removeEventListener('scroll', resumeAudio);
+            document.removeEventListener('touchstart', resumeAudio);
+        }
+        document.addEventListener('click', resumeAudio, {once: true});
+        document.addEventListener('scroll', resumeAudio, {once: true});
+        document.addEventListener('touchstart', resumeAudio, {once: true});
+    }
+}
+
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+        isPlaying = true;
+    } else if (event.data == YT.PlayerState.PAUSED) {
+        isPlaying = false;
+    } else if (event.data == 0) {
+        player.playVideo();
+    }
+    updateButton();
+}
+
+window.addEventListener('beforeunload', function() {
+    if (player && player.getCurrentTime) {
+        localStorage.setItem('audioTime', player.getCurrentTime());
+        localStorage.setItem('audioPlaying', isPlaying);
+    }
+});
+
+document.getElementById('audio-toggle').addEventListener('click', function() {
+    if (!player || !player.getPlayerState) return;
+    if (isPlaying) {
+        player.pauseVideo();
+    } else {
+        player.playVideo();
+    }
+});
+
+document.getElementById('audio-volume').addEventListener('input', function(e) {
+    if (player && player.setVolume) {
+        player.setVolume(e.target.value);
+    }
+});
+
+function updateButton() {
+    var btn = document.getElementById('audio-toggle');
+    if (btn) {
+        btn.textContent = isPlaying ? '⏸' : '▶';
+    }
+}
+</script>
+</body>
+</html>

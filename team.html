@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | My Land Tours & Travel</title>
+    <meta name="description" content="Meet the expert guides and team behind My Land Tours & Travel. Passionate professionals crafting your perfect safari experience.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mylandtoursandtravel.co.ke/team.html">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <meta property="og:title" content="My Land Tours & Travel | Premium Safaris in Kenya">
+    <meta property="og:description" content="Book unforgettable safari experiences in Kenya. Maasai Mara, Amboseli, Diani Beach & more.">
+    <meta property="og:image" content="https://mylandtoursandtravel.co.ke/og-image.jpg">
+    <meta property="og:url" content="https://mylandtoursandtravel.co.ke/team.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Land Tours & Travel | Premium Safaris in Kenya">
+    <meta name="twitter:description" content="Book unforgettable safari experiences in Kenya. Maasai Mara, Amboseli, Diani Beach & more.">
+    <meta name="twitter:image" content="https://mylandtoursandtravel.co.ke/og-image.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-brown: #2C1810;
+            --bg-brown-light: #3D2418;
+            --bg-brown-dark: #1A0F0A;
+            --sunset-gold: #E8A838;
+            --sunset-orange: #D4762C;
+            --sunset-yellow: #F5C842;
+            --cream: #F5E6D3;
+            --sage: #8B7355;
+            --glass: rgba(44, 24, 16, 0.85);
+            --glass-border: rgba(232, 168, 56, 0.2);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-brown);
+            color: var(--cream);
+            overflow-x: hidden;
+        }
+        .hero-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100vh;
+            z-index: -2;
+            background:
+                radial-gradient(ellipse at 20% 80%, rgba(61, 36, 24, 0.6) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(232, 168, 56, 0.15) 0%, transparent 50%),
+                linear-gradient(180deg, #1A0F0A 0%, #2C1810 50%, #1A0F0A 100%);
+        }
+        nav {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            z-index: 10000;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            z-index: 10001;
+        }
+        .logo-icon {
+            width: 55px; height: 55px;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 25px rgba(232, 168, 56, 0.4);
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange));
+        }
+        .logo-icon svg { width: 70%; height: 70%; }
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--cream);
+            letter-spacing: 1px;
+        }
+        .logo-text span { color: var(--sunset-gold); }
+        .nav-links {
+            display: flex;
+            gap: 1.2rem;
+            list-style: none;
+            z-index: 10001;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+        .nav-links a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: var(--sunset-gold);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover { color: var(--sunset-gold); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange)) !important;
+            color: var(--bg-brown-dark) !important;
+            padding: 0.8rem 2rem !important;
+            border-radius: 50px !important;
+            font-weight: 600 !important;
+            transition: all 0.3s ease !important;
+            border: none !important;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(232, 168, 56, 0.4);
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--sunset-gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10001;
+        }
+        .page-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 4rem 4rem;
+            position: relative;
+        }
+        .page-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            color: var(--cream);
+            margin-bottom: 1rem;
+        }
+        .page-hero p {
+            color: var(--sage);
+            font-size: 1.2rem;
+            max-width: 700px;
+            line-height: 1.8;
+        }
+        section { padding: 6rem 4rem; position: relative; }
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+        .section-label {
+            display: inline-block;
+            color: var(--sunset-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .section-label::before, .section-label::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40px; height: 1px;
+            background: var(--sunset-gold);
+            opacity: 0.5;
+        }
+        .section-label::before { right: calc(100% + 1rem); }
+        .section-label::after { left: calc(100% + 1rem); }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+        }
+        .section-header p {
+            color: var(--sage);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .team-card {
+            background: linear-gradient(145deg, rgba(61, 36, 24, 0.8), rgba(26, 15, 10, 0.9));
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+        .team-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--sunset-gold);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+        .team-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, var(--bg-brown-light), var(--bg-brown-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .team-image .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--bg-brown-dark);
+            border: 4px solid var(--glass-border);
+        }
+        .team-card:hover .team-image .avatar {
+            border-color: var(--sunset-gold);
+            transform: scale(1.1);
+            transition: all 0.4s ease;
+        }
+        .team-info {
+            padding: 1.5rem;
+        }
+        .team-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--cream);
+            margin-bottom: 0.3rem;
+        }
+        .team-info .role {
+            color: var(--sunset-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+        .team-info p {
+            color: var(--sage);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .team-social a {
+            width: 36px; height: 36px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sunset-gold);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .team-social a:hover {
+            background: var(--sunset-gold);
+            color: var(--bg-brown-dark);
+        }
+        .team-testimonials-section {
+            background: linear-gradient(180deg, var(--bg-brown-dark) 0%, var(--bg-brown) 100%);
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .testimonial-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            position: relative;
+            transition: all 0.4s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--sunset-gold);
+        }
+        .testimonial-card::before {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            color: var(--sunset-gold);
+            opacity: 0.2;
+            position: absolute;
+            top: -0.5rem; left: 1.5rem;
+            line-height: 1;
+        }
+        .testimonial-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-style: italic;
+            color: var(--cream);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .author-avatar {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--bg-brown-dark);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .author-info h4 {
+            color: var(--cream);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .author-info .role {
+            color: var(--sunset-gold);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .stars-rating {
+            color: var(--sunset-gold);
+            margin-top: 0.3rem;
+            font-size: 0.85rem;
+        }
+        .join-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .join-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+        .join-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--sunset-gold);
+        }
+        .join-card i {
+            font-size: 2.5rem;
+            color: var(--sunset-gold);
+            margin-bottom: 1.5rem;
+        }
+        .join-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--cream);
+            margin-bottom: 0.75rem;
+        }
+        .join-card p {
+            color: var(--sage);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        footer {
+            background: var(--bg-brown-dark);
+            border-top: 1px solid var(--glass-border);
+            padding: 4rem 4rem 2rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto 3rem;
+        }
+        .footer-brand .logo { margin-bottom: 1.5rem; }
+        .footer-brand p {
+            color: var(--sage);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .footer-social a {
+            width: 45px; height: 45px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sunset-gold);
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .footer-social a:hover {
+            background: var(--sunset-gold);
+            color: var(--bg-brown-dark);
+            transform: translateY(-3px);
+        }
+        .footer-column h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+        }
+        .footer-column ul { list-style: none; }
+        .footer-column ul li { margin-bottom: 0.75rem; }
+        .footer-column ul li a {
+            color: var(--sage);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+        .footer-column ul li a:hover { color: var(--sunset-gold); }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+            color: var(--sage);
+            font-size: 0.9rem;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .legal-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 20000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        .legal-modal-overlay.active {
+            display: flex;
+        }
+        .legal-modal {
+            background: var(--bg-brown);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 85vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            animation: modalSlideIn 0.4s ease;
+        }
+        @keyframes modalSlideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .cursor {
+            position: fixed;
+            width: 20px; height: 20px;
+            border: 2px solid var(--sunset-gold);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.15s ease, opacity 0.15s ease;
+            mix-blend-mode: difference;
+        }
+        .cursor-follower {
+            position: fixed;
+            width: 8px; height: 8px;
+            background: var(--sunset-gold);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.08s ease;
+        }        
+        .legal-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--glass-border);
+            background: var(--bg-brown-dark);
+        }
+        .legal-modal-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--cream);
+        }
+        .legal-modal-close {
+            background: none;
+            border: none;
+            color: var(--sunset-gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .legal-modal-close:hover {
+            background: var(--glass);
+        }
+        .legal-modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            color: var(--sage);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        .legal-modal-body h4 {
+            color: var(--sunset-gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        .legal-modal-body h4:first-child {
+            margin-top: 0;
+        }
+        .legal-modal-body p {
+            margin-bottom: 1rem;
+        }
+        .legal-modal-body ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+        }
+        .legal-modal-body li {
+            margin-bottom: 0.5rem;
+        }
+        .legal-modal-body strong {
+            color: var(--cream);
+        }
+        .legal-tabs {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0 2rem;
+            border-bottom: 1px solid var(--glass-border);
+            background: var(--bg-brown-dark);
+            overflow-x: auto;
+        }
+        .legal-tab {
+            padding: 1rem 1.5rem;
+            background: none;
+            border: none;
+            color: var(--sage);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .legal-tab:hover {
+            color: var(--sunset-gold);
+        }
+        .legal-tab.active {
+            color: var(--sunset-gold);
+            border-bottom-color: var(--sunset-gold);
+        }
+        .legal-content {
+            display: none;
+        }
+        .legal-content.active {
+            display: block;
+        }
+
+        @media (max-width: 1024px) {
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .join-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; }
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            section { padding: 4rem 1.5rem; }
+            .page-hero { padding: 6rem 1.5rem 3rem; }
+            .team-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-bg"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>    
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">
+           <div class="logo-icon">
+              <img src="your-logo.png" alt="My Land Tours" style="width:100%;height:100%;object-fit:contain;">
+           </div>
+            <div class="logo-text">My Land <span>Tours</span></div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="index.html#packages">Packages</a></li>
+            <li><a href="index.html#contact" class="nav-cta">Book Now</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div>
+            <div class="section-label">The People</div>
+            <h1>Meet Our Team</h1>
+            <p>Passionate professionals dedicated to crafting your perfect African adventure. From our expert guides to our operations team, every member shares a deep love for Kenya's wild places.</p>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section>
+        <div class="section-header reveal">
+            <div class="section-label">Leadership</div>
+            <h2>The People Behind the Magic</h2>
+            <p>Experienced professionals leading Kenya's premier safari experience.</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <div class="avatar">GK</div>
+                </div>
+                <div class="team-info">
+                    <h3>Gichuki Kabugi</h3>
+                    <div class="role">Founder & CEO</div>
+                    <p>Former tour driver with 20+ years of experience. Gichuki founded My Land Tours and Travel in 2009 with a vision to share Kenya's hidden gems with the world.</p>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <div class="avatar">AK</div>
+                </div>
+                <div class="team-info">
+                    <h3>Adam Kabugi</h3>
+                    <div class="role">Operations Director</div>
+                    <p>Hospitality management and wildlife conservation expert ensuring every safari runs like clockwork. Adam oversees logistics, accommodations, and guest experience answerIng directly to the CEO.</p>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <div class="avatar">DM</div>
+                </div>
+                <div class="team-info">
+                    <h3>David Mutua</h3>
+                    <div class="role">Head Guide & Trainer</div>
+                    <p>KPSGA Gold-certified guide with 18 years of experience. David trains all new guides and leads our most exclusive photographic safaris.</p>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <div class="avatar">JN</div>
+                </div>
+                <div class="team-info">
+                    <h3>Jesse Ngugi</h3>
+                    <div class="role">Marketing Director</div>
+                    <p>Digital marketer and Travel enthusiast. Jesse captures the essence of our safaris and connects us with travelers worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safari Guides -->
+    <section style="background: linear-gradient(180deg, var(--bg-brown-light), var(--bg-brown));">
+        <div class="section-header reveal">
+            <div class="section-label">Expert Guides</div>
+            <h2>Our Safari Guides</h2>
+            <p>Certified professionals who bring the bush to life with their knowledge, passion, and storytelling.</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <div class="avatar">PK</div>
+                </div>
+                <div class="team-info">
+                    <h3>Paul Kimani</h3>
+                    <div class="role">Senior Safari Guide</div>
+                    <p>15 years guiding in the Maasai Mara. Paul has an uncanny ability to find leopards and knows every lion pride by name. Speaks English, Swahili, and French.</p>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <div class="avatar">SO</div>
+                </div>
+                <div class="team-info">
+                    <h3>Sarah Omondi</h3>
+                    <div class="role">Birding Specialist</div>
+                    <p>Ornithologist and KPSGA Silver guide. Sarah can identify over 800 Kenyan bird species by call alone. Her birding safaris are legendary among enthusiasts.</p>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <div class="avatar">MK</div>
+                </div>
+                <div class="team-info">
+                    <h3>Moses Kipchirchir</h3>
+                    <div class="role">Adventure Guide</div>
+                    <p>Mount Kenya trekking expert and walking safari leader. Moses grew up in the Aberdare foothills and knows every trail, waterfall, and hidden valley.</p>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <div class="avatar">LM</div>
+                </div>
+                <div class="team-info">
+                    <h3>Lucy Mwangi</h3>
+                    <div class="role">Cultural Guide</div>
+                    <p>Maasai cultural expert and community liaison. Lucy ensures our cultural visits are respectful, authentic, and mutually beneficial for guests and communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drivers -->
+    <section>
+        <div class="section-header reveal">
+            <div class="section-label">Behind the Wheel</div>
+            <h2>Our Drivers</h2>
+            <p>Safe, skilled, and knowledgeable — the unsung heroes who navigate Kenya's toughest terrain to get you to the wildlife.</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <div class="avatar">JO</div>
+                </div>
+                <div class="team-info">
+                    <h3>John Otieno</h3>
+                    <div class="role">Lead Driver</div>
+                    <p>12 years driving safari vehicles across Kenya. John knows every road, track, and shortcut from Nairobi to the Mara. His vehicle is always spotless and his driving is smooth as silk.</p>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <div class="avatar">EK</div>
+                </div>
+                <div class="team-info">
+                    <h3>Ezekiel Kamau</h3>
+                    <div class="role">Safari Driver</div>
+                    <p>Former truck driver turned safari expert. Ezekiel's patience and calm demeanor make even the bumpiest tracks feel like a gentle cruise. He never misses a wildlife sighting.</p>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <div class="avatar">PN</div>
+                </div>
+                <div class="team-info">
+                    <h3>Peter Njoroge</h3>
+                    <div class="role">Coaster Driver</div>
+                    <p>Specialist in large group transport. Peter handles our 25-seater coaster buses with the precision of a Formula 1 driver. Groups love his cheerful personality and road stories.</p>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-image">
+                    <div class="avatar">RM</div>
+                </div>
+                <div class="team-info">
+                    <h3>Ruth Muthoni</h3>
+                    <div class="role">Airport Transfer Driver</div>
+                    <p>First impressions matter. Ruth ensures every guest is welcomed warmly at JKIA with a smile, cold water, and a smooth ride to their hotel. Punctuality is her superpower.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Testimonials -->
+    <section class="team-testimonials-section">
+        <div class="section-header reveal">
+            <div class="section-label">Voices</div>
+            <h2>What Our Team Says</h2>
+            <p>The people who make the magic happen, in their own words.</p>
+        </div>
+        <div class="testimonials-grid reveal">
+            <div class="testimonial-card">
+                <p class="testimonial-text">Working at My Land Tours and Travel is not just a job — it is a calling. Every morning I wake up knowing I am going to show someone the most incredible animals on Earth. That never gets old.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">PK</div>
+                    <div class="author-info">
+                        <h4>Paul Kimani</h4>
+                        <div class="role">Senior Safari Guide</div>
+                        <div class="stars-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">I have been with My Land Tours and Travel for 8 years, and the company has grown so much while keeping its heart. Mr. Gichuki still personally reviews every itinerary to make sure it is perfect.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AK</div>
+                    <div class="author-info">
+                        <h4>Adam Kabugi</h4>
+                        <div class="role">Operations Director</div>
+                        <div class="stars-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">The training program here is world-class. When I joined as a junior guide, David took me under his wing and taught me everything. Now I train the next generation. That is the My Land Tours and Travel way.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MK</div>
+                    <div class="author-info">
+                        <h4>Moses Kipchirchir</h4>
+                        <div class="role">Adventure Guide</div>
+                        <div class="stars-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">As a driver, I am often the first and last person a guest sees on their trip. I take that responsibility seriously. A warm welcome and a safe ride set the tone for the entire safari.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">RM</div>
+                    <div class="author-info">
+                        <h4>Ruth Muthoni</h4>
+                        <div class="role">Airport Transfer Driver</div>
+                        <div class="stars-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us -->
+    <section style="background: linear-gradient(180deg, var(--bg-brown), var(--bg-brown-dark));">
+        <div class="section-header reveal">
+            <div class="section-label">Careers</div>
+            <h2>Join Our Team</h2>
+            <p>Passionate about wildlife, travel, and hospitality? We are always looking for exceptional people to join our growing family.</p>
+        </div>
+        <div class="join-grid reveal">
+            <div class="join-card">
+                <i class="fas fa-compass"></i>
+                <h4>Safari Guides</h4>
+                <p>KPSGA-certified or working towards certification. Must have deep knowledge of Kenyan wildlife, ecosystems, and culture. Languages are a plus.</p>
+            </div>
+            <div class="join-card">
+                <i class="fas fa-truck"></i>
+                <h4>Drivers</h4>
+                <p>Experienced drivers with clean records and knowledge of Kenya's road network. Safari experience preferred but not required — we train the right people.</p>
+            </div>
+            <div class="join-card">
+                <i class="fas fa-briefcase"></i>
+                <h4>Operations Staff</h4>
+                <p>Logistics coordinators, booking agents, and customer service professionals. Hospitality background and attention to detail essential.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="mailto:careers@mylandtours.co.ke" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2.5rem; background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-orange)); color: var(--bg-brown-dark); text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1rem; transition: all 0.3s ease;">
+                <i class="fas fa-paper-plane"></i> Send Your CV
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                   <div class="logo-icon">
+                     <img src="your-logo.png" alt="My Land Tours and Travel" style="width:100%;height:100%;object-fit:cover;">
+                   </div>
+                    <div class="logo-text">My Land <span>Tours and Travel</span></div>
+                </a>
+                <p>Premier safari and travel experiences in Kenya and East Africa. Crafting unforgettable journeys since 2009. Your adventure, our passion.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=100054323976669" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/myland_tours" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/mylandtours" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/mylandtours" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/254722419414" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Destinations</h4>
+                <ul>
+                    <li><a href="index.html#destinations">Maasai Mara</a></li>
+                    <li><a href="index.html#destinations">Amboseli</a></li>
+                    <li><a href="index.html#destinations">Lake Nakuru</a></li>
+                    <li><a href="index.html#destinations">Samburu</a></li>
+                    <li><a href="index.html#destinations">Tsavo</a></li>
+                    <li><a href="index.html#destinations">Diani Beach</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="index.html#packages">Safari Packages</a></li>
+                    <li><a href="index.html#packages">Hotel Bookings</a></li>
+                    <li><a href="index.html#packages">Airport Transfers</a></li>
+                    <li><a href="index.html#vehicles">Van & Bus Hire</a></li>
+                    <li><a href="index.html#packages">Group Tours</a></li>
+                    <li><a href="index.html#packages">Honeymoon Packages</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html#mission">Mission</a></li>
+                    <li><a href="about.html#vision">Vision</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a onclick="openLegalModal('privacy')">Privacy Policy</a></li>
+                    <li><a onclick="openLegalModal('terms')">Terms of Service</a></li>
+                    <li><a onclick="openLegalModal('cancellation')">Cancellation Policy</a></li>
+                    <li><a onclick="openLegalModal('insurance')">Travel Insurance</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><span id="year"></span> © My Land Tours & Travel. All rights reserved. | KATO Member | Licensed Tour Operator</p>
+            <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        </div>
+    </footer>
+
+    <!-- LEGAL MODAL -->
+    <div class="legal-modal-overlay" id="legalModalOverlay" onclick="closeLegalModal(event)">
+        <div class="legal-modal" onclick="event.stopPropagation()">
+            <div class="legal-modal-header">
+                <h3 id="legalModalTitle">Legal Information</h3>
+                <button class="legal-modal-close" onclick="closeLegalModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="legal-tabs">
+                <button class="legal-tab active" onclick="switchLegalTab('privacy')">Privacy Policy</button>
+                <button class="legal-tab" onclick="switchLegalTab('terms')">Terms of Service</button>
+                <button class="legal-tab" onclick="switchLegalTab('cancellation')">Cancellation Policy</button>
+                <button class="legal-tab" onclick="switchLegalTab('insurance')">Travel Insurance</button>
+            </div>
+            <div class="legal-modal-body" id="legalModalBody">
+                <div class="legal-content active" id="privacy-content">
+                    <h4>1. Information We Collect</h4>
+                    <p>We collect personal information that you voluntarily provide when booking a safari, filling out our contact forms, or communicating with us. This includes your name, email address, phone number, passport details (for park permits), travel preferences, dietary requirements, and emergency contact information.</p>
+                    <h4>2. How We Use Your Information</h4>
+                    <p>Your information is used exclusively to: process and confirm your safari booking; communicate with you about your itinerary; arrange accommodations, park permits, and transportation; provide customer support; and send you travel updates and offers (only with your consent).</p>
+                    <h4>3. Information Sharing</h4>
+                    <p>We do not sell your personal data. We only share information with trusted partners necessary to fulfill your safari: accommodation providers, national park authorities (for entry permits), transportation providers, and travel insurance companies (if requested). All partners are bound by confidentiality agreements.</p>
+                    <h4>4. Data Security</h4>
+                    <p>We implement industry-standard security measures including SSL encryption for all data transmission, secure server storage, access controls, and regular security audits. Your payment information is processed through PCI-compliant payment gateways — we never store your credit card details.</p>
+                    <h4>5. Data Retention</h4>
+                    <p>We retain your personal data for 7 years after your safari completion to comply with Kenyan tax and tourism regulations. You may request deletion of your data at any time by emailing <a href="mailto:info@mylandtours.co.ke" style="color:var(--sunset-gold)">info@mylandtours.co.ke</a>.</p>
+                    <h4>6. Your Rights</h4>
+                    <p>Under the Kenyan Data Protection Act 2019, you have the right to: access your personal data; request correction of inaccurate data; request deletion of your data; object to processing; and lodge a complaint with the Office of the Data Protection Commissioner.</p>
+                    <h4>7. Cookies</h4>
+                    <p>Our website uses essential cookies for functionality and analytics cookies to improve user experience. You can control cookie preferences through your browser settings.</p>
+                    <h4>8. Contact</h4>
+                    <p>For privacy-related inquiries, contact our Data Protection Officer at <a href="mailto:info@mylandtours.co.ke" style="color:var(--sunset-gold)">info@mylandtours.co.ke</a> or call +254 757 269980.</p>
+                </div>
+                <div class="legal-content" id="terms-content">
+                    <h4>1. Acceptance of Terms</h4>
+                    <p>By accessing our website and booking our services, you agree to these Terms of Service. If you do not agree, please do not use our services. These terms are governed by the laws of the Republic of Kenya.</p>
+                    <h4>2. Booking & Payments</h4>
+                    <p>A 30% non-refundable deposit is required to confirm all bookings. Full payment is due 60 days before departure. For bookings made within 60 days of travel, full payment is required at the time of booking. We accept bank transfer, M-Pesa, and major credit cards.</p>
+                    <h4>3. Safari Participation Requirements</h4>
+                    <p>All travelers must have: a valid passport with at least 6 months validity; appropriate visas (we can assist with eTA applications); comprehensive travel insurance; and required vaccinations (Yellow Fever certificate mandatory for entry from endemic countries).</p>
+                    <h4>4. Health & Safety</h4>
+                    <p>Wildlife safaris involve inherent risks. You must follow all safety instructions provided by your guide. My Land Tours is not liable for injuries resulting from failure to follow guide instructions, wildlife encounters, or personal negligence. We strongly recommend malaria prophylaxis for all safari destinations.</p>
+                    <h4>5. Itinerary Changes</h4>
+                    <p>While we make every effort to adhere to published itineraries, we reserve the right to make modifications due to: weather conditions; park closures; vehicle breakdowns; or circumstances beyond our control. Significant changes will be communicated promptly with alternative arrangements offered.</p>
+                    <h4>6. Liability Limitation</h4>
+                    <p>My Land Tours and Travel's liability is limited to the total amount paid for the safari package. We are not liable for: acts of God; political unrest; airline delays/cancellations; or losses caused by third-party service providers. We strongly recommend comprehensive travel insurance covering trip cancellation, medical emergencies, and evacuation.</p>
+                    <h4>7. Intellectual Property</h4>
+                    <p>All content on this website including text, images, logos, and design is the property of My Land Tours & Travel. With a number of stock free images, unauthorized use, reproduction, or distribution is prohibited.</p>
+                    <h4>8. Governing Law</h4>
+                    <p>These terms are governed by the laws of Kenya. Any disputes shall be resolved through mediation or arbitration in Nairobi, Kenya.</p>
+                </div>
+                <div class="legal-content" id="cancellation-content">
+                   <h4>1. Cancellation by You</h4>
+                    <p>All cancellations must be submitted in writing via email to <a href="mailto:bookings@mylandtours.co.ke" style="color:var(--sunset-gold)">bookings@mylandtours.co.ke</a>. Cancellation fees are calculated from the date we receive your written notice:</p>
+                    <ul>
+                        <li><strong>90+ days before departure:</strong> Loss of deposit (30% of total)</li>
+                        <li><strong>60-89 days before departure:</strong> 50% of total trip cost</li>
+                        <li><strong>30-59 days before departure:</strong> 75% of total trip cost</li>
+                        <li><strong>Less than 30 days:</strong> 100% of total trip cost — no refund</li>
+                    </ul>
+                    <h4>2. Cancellation by Us</h4>
+                    <p>In the unlikely event that we must cancel your safari due to circumstances beyond our control (natural disasters, government restrictions, park closures), you will receive a full refund or the option to reschedule at no additional cost.</p>
+                    <h4>3. No-Shows</h4>
+                    <p>Failure to arrive for your safari without prior written notice will be treated as a cancellation less than 30 days — no refund will be issued.</p>
+                    <h4>4. Trip Interruption</h4>
+                    <p>If you choose to leave a safari early for any reason, no refund will be issued for unused portions. We strongly recommend travel insurance with trip interruption coverage.</p>
+                    <h4>5. Date Changes</h4>
+                    <p>Date changes requested more than 60 days before departure may be accommodated subject to availability and a $100 administration fee per person. Changes within 60 days are treated as cancellations.</p>
+                    <h4>6. Force Majeure</h4>
+                    <p>Neither party shall be liable for failure to perform due to causes beyond reasonable control including: natural disasters, war, terrorism, civil unrest, epidemic/pandemic, government actions, or strikes.</p>
+                </div>
+                <div class="legal-content" id="insurance-content">
+                    <h4>1. Insurance</h4>
+                    <p>Comprehensive travel insurance isn't <strong>mandatory</strong> for all My Land Tours and Travel safaris. Though we strongly recommend that all travelers to have a comprehensive policy. You must provide proof of insurance before departure on Mount Kenya climbs, Adventure Tours, Some international trips, Specific partner requirements or when a traveller has any pre-existing conditions that necessitate coverage. Without valid insurance, we reserve the right to cancel your booking with standard cancellation fees applying.</p>
+                    <h4>2. Coverage</h4>
+                    <p>Your travel insurance should include at minimum if insured:</p>
+                    <ul>
+                        <li><strong>Emergency Medical:</strong> Coverage sufficient for hospitalization, emergency treatment, and medical emergencies during travel.</li>
+                        <li><strong>Medical Evacuation:</strong> Coverage for emergency evacuation and transportation from remote destinations to appropriate medical facilities in case of emergencies.</li>
+                        <li><strong>Trip Cancellation:</strong> 100% of prepaid non-refundable costs</li>
+                        <li><strong>Trip Interruption:</strong> 100% of remaining trip value</li>
+                        <li><strong>Baggage & Personal Effects:</strong> Adequate coverage for cameras, binoculars, etc.</li>
+                        <li><strong>24-Hour Emergency Assistance:</strong> With reverse charge call capability</li>
+                    </ul>
+                    <h4>3. Safari-Specific Coverage</h4>
+                    <p>Standard travel insurance often excludes safari activities. Ensure your policy explicitly covers: wildlife viewing from open vehicles; walking safaris and bush walks; hot air balloon rides; and activities above 4,000m (Mount Kenya treks).</p>
+                    <h4>4. Medical Considerations for Kenya</h4>
+                    <p>While Kenya offers excellent private medical facilities in major cities, travelers visiting remote safari destinations should ensure their insurance includes emergency medical evacuation coverage. Quality private hospitals exist in major cities but evacuation from remote parks is expensive. Malaria is present in most safari areas — take prophylaxis and use mosquito repellent. Drink only bottled or purified water provided by your tour operator.</p>
+                    <h4>5. Recommended Insurance Providers</h4>
+                    <p>While we don't endorse specific providers, our clients have had positive experiences with: World Nomads; SafetyWing; Allianz Global Assistance; and IMG Global. For Kenyan residents, APA Insurance and Jubilee Insurance offer suitable local coverage and Amref in general.</p>
+                    <h4>6. Pre-Existing Conditions</h4>
+                    <p>Declare all pre-existing medical conditions when purchasing insurance. Failure to disclose may void your coverage. Many insurers offer waivers if you purchase within 14-21 days of your initial trip deposit.</p>
+                    <h4>7. Claims Assistance</h4>
+                    <p>In the event of a claim, we will provide all necessary documentation including: trip invoices; medical reports; police reports (if applicable); and witness statements. Contact us immediately if you need assistance with a claim.</p>
+                    <h4>8. Emergency Assistance During Your Trip</h4>
+                    <p>If you experience a medical emergency, accident, loss of travel documents, or any situation requiring immediate assistance, contact your insurance provider's emergency hotline first and notify the company guide or driver assigned to your trip as soon as possible. Our team will assist in coordinating local support where possible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== CUSTOM CURSOR =====
+        const cursor = document.getElementById('cursor');
+        const cursorFollower = document.getElementById('cursorFollower');
+        if (window.matchMedia('(pointer: fine)').matches) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX - 10 + 'px';
+                cursor.style.top = e.clientY - 10 + 'px';
+                cursorFollower.style.left = e.clientX - 4 + 'px';
+                cursorFollower.style.top = e.clientY - 4 + 'px';
+            });
+        }
+            document.querySelectorAll('a, button, .destination-card, .selector-card, .experience-item').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(1.5)';
+                    cursor.style.borderColor = 'var(--sunset-yellow)';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursor.style.borderColor = 'var(--sunset-gold)';
+                });
+            });
+
+        // Mobile menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.background = 'var(--glass)';
+                navLinks.style.backdropFilter = 'blur(20px)';
+                navLinks.style.padding = '2rem';
+                navLinks.style.gap = '1.5rem';
+                navLinks.style.borderBottom = '1px solid var(--glass-border)';
+            }
+        });
+
+        // Scroll reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 100);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+
+        function openLegalModal(tab) {
+            document.getElementById('legalModalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            switchLegalTab(tab);
+        }
+        function closeLegalModal(event) {
+            if (!event || event.target === document.getElementById('legalModalOverlay')) {
+                document.getElementById('legalModalOverlay').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        function switchLegalTab(tab) {
+            document.querySelectorAll('.legal-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.legal-content').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.legal-tab[onclick="switchLegalTab('${tab}')"]`).classList.add('active');
+            document.getElementById(tab + '-content').classList.add('active');
+            const titles = {
+                'privacy': 'Privacy Policy',
+                'terms': 'Terms of Service',
+                'cancellation': 'Cancellation Policy',
+                'insurance': 'Travel Insurance'
+            };
+            document.getElementById('legalModalTitle').textContent = titles[tab];
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLegalModal();
+        });
+
+    </script>
+<!-- AUDIO RESUME: No overlay, just resume from saved time -->
+<div id="audio-player" style="position: fixed; bottom: 12px; right: 12px; z-index: 9999; background: rgba(44,24,16,0.92); border: 1px solid rgba(232,168,56,0.3); border-radius: 24px; padding: 6px 12px; display: none; align-items: center; gap: 8px; backdrop-filter: blur(10px);">
+    <span style="color: #E8A838; font-size: 11px; font-family: 'Inter', sans-serif; font-weight: 500;">🎵 My Land is Kenya</span>
+    <button id="audio-toggle" style="background: #E8A838; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer; color: #2C1810; font-size: 12px; display: flex; align-items: center; justify-content: center;">▶</button>
+    <input type="range" id="audio-volume" min="0" max="100" value="30" style="width: 50px; accent-color: #E8A838;">
+</div>
+
+<div style="position: fixed; bottom: 80px; right: 20px; width: 2px; height: 2px; z-index: 9998; overflow: hidden; opacity: 0.01;">
+    <iframe id="yt-player" src="https://www.youtube.com/embed/gUKe7Q0N0-4?enablejsapi=1&autoplay=0&mute=0&controls=0&loop=1&playlist=gUKe7Q0N0-4" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+</div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+var player;
+var isPlaying = false;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('yt-player', {
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+function onPlayerReady(event) {
+    var savedTime = localStorage.getItem('audioTime');
+    var wasPlaying = localStorage.getItem('audioPlaying');
+    
+    if (savedTime) {
+        player.seekTo(parseFloat(savedTime), true);
+    }
+    
+    player.setVolume(50);
+    
+    // Only show player if user had music on before
+    if (wasPlaying === 'true') {
+        document.getElementById('audio-player').style.display = 'flex';
+        
+        // Wait for user interaction to unmute and play
+        function resumeAudio() {
+            player.unMute();
+            player.playVideo();
+            document.removeEventListener('click', resumeAudio);
+            document.removeEventListener('scroll', resumeAudio);
+            document.removeEventListener('touchstart', resumeAudio);
+        }
+        document.addEventListener('click', resumeAudio, {once: true});
+        document.addEventListener('scroll', resumeAudio, {once: true});
+        document.addEventListener('touchstart', resumeAudio, {once: true});
+    }
+}
+
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+        isPlaying = true;
+    } else if (event.data == YT.PlayerState.PAUSED) {
+        isPlaying = false;
+    } else if (event.data == 0) {
+        player.playVideo();
+    }
+    updateButton();
+}
+
+window.addEventListener('beforeunload', function() {
+    if (player && player.getCurrentTime) {
+        localStorage.setItem('audioTime', player.getCurrentTime());
+        localStorage.setItem('audioPlaying', isPlaying);
+    }
+});
+
+document.getElementById('audio-toggle').addEventListener('click', function() {
+    if (!player || !player.getPlayerState) return;
+    if (isPlaying) {
+        player.pauseVideo();
+    } else {
+        player.playVideo();
+    }
+});
+
+document.getElementById('audio-volume').addEventListener('input', function(e) {
+    if (player && player.setVolume) {
+        player.setVolume(e.target.value);
+    }
+});
+
+function updateButton() {
+    var btn = document.getElementById('audio-toggle');
+    if (btn) {
+        btn.textContent = isPlaying ? '⏸' : '▶';
+    }
+}
+</script>
+
+</body>
+</html>
